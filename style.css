@@ -102,22 +102,42 @@ input {
   float:right;
   width:100%;
   max-width:600px;
-  margin-top:30px;
+  margin-top:20px;
+  line-height: 175%;
 }
-.main2_1_2 > p.big {
+.main2 p.big {
   font-size: 20px;
+  font-weight: 700;
+  line-height: 200%;
+}
+.main2_1_2 > a.small {
+  color:#949494;
+  font-size: 13px;
 }
 .main2_1_2 > a.more {
   position: absolute;
   float:right;
-  right:calc(50vw + 40px);
-  
+  right:calc(50vw + 30px);
+  bottom:25px;
 }
 .main2_2 {
   background-color: #dcba94;
 }
-
-
+.main2_2_1 {
+  margin-left:40px;
+  margin-top:20px;
+}
+.main2_2_2 {
+  width:130px;
+  height:40px;
+  background-color:#af8967;
+  text-align: center;
+  margin-left:40px;
+  margin-top:20px;
+  color:#fff;
+  line-height:40px; /* 세로 중앙 정렬 */
+  cursor: pointer;
+}
 
 /* 메뉴 추천*/
 .main3 {
@@ -128,6 +148,14 @@ input {
   text-align: center;
 }
 
+.main3_1 {
+  padding-top:90px;
+  padding-bottom:56px;
+}
+.main3_1 > p.big {
+  font-size:40px;
+  font-weight: 700;
+}
 .main3_2 {
   display: flex;
   overflow:hidden;
@@ -136,7 +164,13 @@ input {
   text-align: center;
 }
 .main3_2 > div {
-  padding:calc(1% - 15px);
+  padding:calc(2% - 20px);
+}
+.main3_2 > div > p.bold {
+  font-size:18px;
+  font-weight: bolder;
+  line-height: 200%;
+  margin-top:20px;
 }
 
 /* 지원 게임 */
@@ -154,12 +188,23 @@ tr, td {
   height:540px;
   background-color:#2e2d35;
 }
-
+/* 매장 찾기  */
 .main5 {
   width:100vw;
   max-width:1920px;
   height:525px;
   background-color:#f8f7f5;
+}
+.main5 > p.very_big {
+  font-size:45px;
+  font-weight: 900;
+}
+.main5 > p.big {
+  font-size:25px;
+  font-weight: bolder;
+}
+.main5 > p.normal {
+  margin-top:25px;
 }
 
 /* 푸터 */
