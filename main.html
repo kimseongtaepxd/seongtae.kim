@@ -13,14 +13,25 @@
       a {text-decoration:none;}
       body {min-width:760px;}
 
-      html, body {margin:0 auto}
+
+      /* 헤더 */
+      html, body {
+        margin:0 auto;
+        overflow-x:hidden; overflow-y:auto;
+      }
+      header{
+        background:#000;
+      }
       .gnb {
         display:flex; 
         overflow:hidden;
-        background:#000;
         justify-content: center;
         align-items: center;
         text-align : center;
+        width: 100vw;
+        max-width: 1920px;
+        height: 140px;
+        margin:0 auto;
       }
       .menu > ul > li {
         float:left; 
@@ -28,12 +39,113 @@
       }
       .menu > ul > li > a {color:white;}
       .gnb_logo {padding:10px;}
+
+      .main1, .main2, .main3, .main4, .main5 {
+        margin:0 auto;
+      }
+
+
+      /* 이벤트 광고 */
+      .main_img_1 {
+        display:block; 
+        width:100vw; 
+        max-width:1920px; 
+        margin-left:auto; 
+        margin-right:auto;
+      }
+
+      /* 공지사항 검색 */
+      .main2 {
+        display:flex;
+        overflow:hidden;
+        justify-content: center;
+        align-items: center;
+      }
+      .main2_1 , .main2_2 {
+        width:50vw;
+        max-width:960px;
+        height:205px;
+        box-sizing:border-box;
+        padding:30px;
+      }
+      .main2_1 {
+        background-color: #ece4d8;
+      }
+      .main2_2 {
+        background-color: #dcba94;
+      }
+
+      /* 메뉴 */
+      .main3 {
+        width:100vw;
+        max-width:1920px;
+        height:675px;
+        background-color:#f5f4f2;
+        text-align: center;
+      }
+
+      .main3_2 {
+        display: flex;
+        overflow:hidden;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .main3_2 > div {
+        padding:0.5%;
+      }
+
+      /* 지원 게임 */
+      table {
+        border:1px solid white;
+        border-collapse: collapse;
+      }
+      tr, td {
+        border:1px solid white;
+        padding:5px;
+      }
+      .main4 {
+        width:100vw;
+        max-width:1920px;
+        height:540px;
+        background-color:#2e2d35;
+      }
+
+      .main5 {
+        width:100vw;
+        max-width:1920px;
+        height:525px;
+        background-color:#f8f7f5;
+      }
+
+      /* 푸터 */
+      footer {
+        display:flex;
+        overflow:hidden;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:215px;
+        background-color:#272422;
+        color:#8c8c8c;
+      }
+      footer > div {
+        margin:30px;
+      }
+
+      /* TOP BUTTON */
+      button {
+        background-color:transparent;
+        border:none;
+      }
+      
     </style>
   </head>
   <body>
+    <!-- 헤더 -->
     <header>
       <div class="gnb">
-        <img src="GNB_logo.png" width="80" height="80" class="gnb_logo">
+        <img src="GNB_logo.png" width="90" height="90" class="gnb_logo">
         <nav class="menu">
           <ul>
             <li><a href="#"><i>BRAND</i></a></li>
@@ -49,6 +161,101 @@
         
       </div>
     </header>
+  <!-- 헤더 -->
+
+  <!-- 이벤트 광고 -->
+  <div class="main1">
+    <img src="2022-06-21-오뚜기-이벤트.jpg" class="main_img_1">
+  </div>
+
+  <!-- 공지사항, 검색-->
+  <div class="main2">
+    <div class="main2_1">
+      <p>공지사항</p>
+      <p>레드버튼 X 오뚜기 콜라보 이벤트! 이벤트</p>
+      <P>2021년 한해 사랑받은 버트너스픽 공지</P>
+      <P>레드버튼 이용하고 여름휴가 가자! 이벤트</P>
+      <P>BIG5 스탬프 쿠폰 이벤트 이벤트</P>
+    </div>
+    <div class="main2_2">
+      <p>매장보유게임 검색</p>
+      <br />
+      <P>플레이 할 게임이 방문하실 매장에</P>
+      <P>보유되어 있는지 확인해 보세요</P>
+      <P>BIG5 스탬프 쿠폰 이벤트 이벤트</P>
   
+    </div>
+  </div>
+
+  <!-- 메뉴 -->
+  <div class="main3">
+    <div class="main3_1">
+      <P>BUTTONER'S PICK</P>
+      <br />
+      <P>버트너가 선정한 이 달의 메뉴입니다.</P>
+    </div>
+    <div class="main3_2">
+      <div>
+        <img src="더블초코라떼.png" class="menu_img_1" height="270">
+        <p>더블 초코 라떼<br />Double Chocolate Latte</p>
+      </div>
+      <div>
+        <img src="바닐라라떼.png" class="menu_img_2" height="270">
+        <p>바닐라 라떼<br />Vanilla Latte</p>
+      </div>
+      <div>
+        <img src="치킨-포테이토-콤보-1.png" class="menu_img_3" height="270" style="background-color:#edecea">
+        <p>치킨 포테이토 세트<br />Chicken Potato Set</p>
+      </div>
+      <div>
+        <img src="허니버터갈릭감자튀김.png" class="menu_img_4" height="270" style="background-color:#edecea">
+        <p>허니버터갈릭 감자튀김<br />Honey Butter Garlic French Fries</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 지원 게임 -->
+  <div class="main4">
+    <p>새 영상설명 지원 게임</p>
+    <br />
+    <p> POWER GRID </p>
+    <p> 파워 그리드 </p>
+    <table>
+      <tr>
+        <td>난이도 Extreme</td>
+        <td>추천인원 4~6인</td>
+        <td>게임시간 120분</td>
+      </tr>
+    </table>
+    <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
+    <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
+
+  </div>
+
+  <!-- 매장 찾기 -->
+  <div class="main5">
+    <p>Feel redbutton closely</P>
+    <p>매장을 쉽고 빠르게 찾아보세요.</P>
+    <p>즐거움 가득한 레드버튼 매장을 미리 만나보세요!</P>
+
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    <div><img src="푸터_로고.png" height="90"></div>
+    <div>
+      <p>주소 : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호</p>
+      <p>사업자번호 : 224-86-00895 · 대표자 : 김동혁 · e-mail : info@redbutton.co.kr</p>
+      <p>COPYRIGHT ⓒ Redbutton co.,Ltd. All rights reserved.</p>
+    </div>
+    <div>
+      <p>1644-0641</p>
+      <p>오전 9시~12시 / 오후 1시~6시</p>
+      <p>(주말, 공휴일 휴무)</p>
+    </div>
+
+  </footer>
+
+  <button type="button" onclick="location.href='#'"><img src="TOP_button.png" alt=""></button>
   </body>
 </html
