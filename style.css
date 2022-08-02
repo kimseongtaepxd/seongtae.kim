@@ -1,0 +1,173 @@
+/* 초기화 */
+* {margin:0; padding:0;}
+body {font-family:'Helvetica',sans-serif;}
+li {list-style:none;}
+a {text-decoration:none;}
+body {min-width:760px;}
+
+
+/* 헤더 */
+html, body {
+  margin:0 auto;
+  overflow-x:hidden; overflow-y:auto;
+}
+header{
+  background:#272422;
+  width: 100vw;
+  height: 140px;
+}
+.gnb {
+  display:flex; 
+  overflow:hidden;
+  justify-content: center;
+  align-items: center;
+  text-align : center;
+  width:100%;
+  max-width: 1300px;
+  height: inherit;
+  margin:0 auto;
+}
+.gnb_logo {
+  margin:0;
+}
+.gnb_menu {
+  width:83%;
+}
+.menu > ul {
+  white-space: nowrap;
+}
+.menu > ul > li {
+  display:inline-block;
+  padding:calc(6% - 25px);
+}
+.menu > ul > li > a {color:white;}
+
+.gnb_logo{
+  margin:2px;
+}
+
+
+.main1, .main2, .main3, .main4, .main5 {
+  margin:0 auto;
+}
+
+
+/* 이벤트 광고 */
+.main_img_1 {
+  display:block; 
+  width:100vw; 
+  max-width:1920px; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+/* 공지사항 검색 */
+.main2 {
+  display:flex;
+  overflow:hidden;
+  justify-content: center;
+  align-items: center;
+}
+.main2_1 , .main2_2 {
+  width:50vw;
+  max-width:960px;
+  height:205px;
+  box-sizing:border-box;
+  padding:30px;
+}
+.main2_1 {
+  background-color: #ece4d8;
+}
+.main2_2 {
+  background-color: #dcba94;
+}
+
+/* 메뉴 추천*/
+.main3 {
+  width:100vw;
+  max-width:1920px;
+  height:675px;
+  background-color:#f5f4f2;
+  text-align: center;
+}
+
+.main3_2 {
+  display: flex;
+  overflow:hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main3_2 > div {
+  padding:calc(1% - 15px);
+}
+
+/* 지원 게임 */
+table {
+  border:1px solid white;
+  border-collapse: collapse;
+}
+tr, td {
+  border:1px solid white;
+  padding:5px;
+}
+.main4 {
+  width:100vw;
+  max-width:1920px;
+  height:540px;
+  background-color:#2e2d35;
+}
+
+.main5 {
+  width:100vw;
+  max-width:1920px;
+  height:525px;
+  background-color:#f8f7f5;
+}
+
+/* 푸터 */
+footer {
+  width:100vw;
+  height:215px;
+  background-color:#272422;
+  color:#8c8c8c;
+}
+.footer {
+  width:100%;
+  height:inherit;
+  max-width: 1300px;
+  display:flex;
+  overflow:hidden;
+  justify-content: center;
+  align-items: center;
+  margin:0 auto;
+}
+.footer1{
+  margin-left:calc(4% - 30px);
+  margin-right:calc(16% - 140px);
+  line-height: 180%;
+  font-size:15px;
+  
+}
+.footer1 b{
+  font-size:16px;
+  font-weight: bolder;
+}
+
+.footer2 > .big {
+  font-size:25px;
+  font-weight: 900;
+  line-height: 200%;
+}
+
+/* TOP BUTTON */
+button {
+  background-color:transparent;
+  border:none;
+  cursor: pointer;
+}
+.top_button {
+  position:fixed;
+  right:80px;
+  bottom:85px;
+}

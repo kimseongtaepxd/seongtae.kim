@@ -4,161 +4,31 @@
     <title>Main</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <style>
-      /* 초기화 */
-      * {margin:0; padding:0;}
-      body {font-family:'Helvetica',sans-serif;}
-      li {list-style:none;}
-      a {text-decoration:none;}
-      body {min-width:760px;}
-
-
-      /* 헤더 */
-      html, body {
-        margin:0 auto;
-        overflow-x:hidden; overflow-y:auto;
-      }
-      header{
-        background:#000;
-      }
-      .gnb {
-        display:flex; 
-        overflow:hidden;
-        justify-content: center;
-        align-items: center;
-        text-align : center;
-        width: 100vw;
-        max-width: 1920px;
-        height: 140px;
-        margin:0 auto;
-      }
-      .menu > ul > li {
-        float:left; 
-        width:150px;
-      }
-      .menu > ul > li > a {color:white;}
-      .gnb_logo {padding:10px;}
-
-      .main1, .main2, .main3, .main4, .main5 {
-        margin:0 auto;
-      }
-
-
-      /* 이벤트 광고 */
-      .main_img_1 {
-        display:block; 
-        width:100vw; 
-        max-width:1920px; 
-        margin-left:auto; 
-        margin-right:auto;
-      }
-
-      /* 공지사항 검색 */
-      .main2 {
-        display:flex;
-        overflow:hidden;
-        justify-content: center;
-        align-items: center;
-      }
-      .main2_1 , .main2_2 {
-        width:50vw;
-        max-width:960px;
-        height:205px;
-        box-sizing:border-box;
-        padding:30px;
-      }
-      .main2_1 {
-        background-color: #ece4d8;
-      }
-      .main2_2 {
-        background-color: #dcba94;
-      }
-
-      /* 메뉴 */
-      .main3 {
-        width:100vw;
-        max-width:1920px;
-        height:675px;
-        background-color:#f5f4f2;
-        text-align: center;
-      }
-
-      .main3_2 {
-        display: flex;
-        overflow:hidden;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .main3_2 > div {
-        padding:0.5%;
-      }
-
-      /* 지원 게임 */
-      table {
-        border:1px solid white;
-        border-collapse: collapse;
-      }
-      tr, td {
-        border:1px solid white;
-        padding:5px;
-      }
-      .main4 {
-        width:100vw;
-        max-width:1920px;
-        height:540px;
-        background-color:#2e2d35;
-      }
-
-      .main5 {
-        width:100vw;
-        max-width:1920px;
-        height:525px;
-        background-color:#f8f7f5;
-      }
-
-      /* 푸터 */
-      footer {
-        display:flex;
-        overflow:hidden;
-        justify-content: center;
-        align-items: center;
-        width:100vw;
-        height:215px;
-        background-color:#272422;
-        color:#8c8c8c;
-      }
-      footer > div {
-        margin:30px;
-      }
-
-      /* TOP BUTTON */
-      button {
-        background-color:transparent;
-        border:none;
-      }
-      
-    </style>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <!-- 헤더 -->
     <header>
       <div class="gnb">
-        <img src="GNB_logo.png" width="90" height="90" class="gnb_logo">
-        <nav class="menu">
-          <ul>
-            <li><a href="#"><i>BRAND</i></a></li>
-            <li><a href="#"><i>BOARDGAME</i></a></li>
-            <li><a href="#"><i>MENU</i></a></li>
-            <li><a href="#"><i>STORE</i></a></li>
-            <li><a href="#"><i>CONTACT</i></a></li>
-            <li><a href="#"><i>FRANCHISE</i></a></li>
-          </ul>
-        </nav>
-        <img src="GNB_facebook.png" width="30" height="30" class="gnb_logo">
-        <img src="GNB_insta.png" width="30" height="30" class="gnb_logo">
-        
+        <div>
+          <img src="GNB_logo.png" width="90" height="90" class="gnb_logo">
+        </div>
+        <div class="gnb_menu">
+          <nav class="menu">
+            <ul>
+              <li><a href="#"><b><i>BRAND</i></b></a></li>
+              <li><a href="#"><b><i>BOARDGAME</i></b></a></li>
+              <li><a href="#"><b><i>MENU</i></a></b></li>
+              <li><a href="#"><b><i>STORE</i></b></a></li>
+              <li><a href="#"><b><i>CONTACT</i></b></a></li>
+              <li><a href="#"><b><i>FRANCHISE</i></b></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="logo">
+          <img src="GNB_facebook.png" width="30" height="30" class="gnb_logo">
+          <img src="GNB_insta.png" width="30" height="30" class="gnb_logo">
+        </div>
       </div>
     </header>
   <!-- 헤더 -->
@@ -242,20 +112,21 @@
 
   <!-- 푸터 -->
   <footer>
-    <div><img src="푸터_로고.png" height="90"></div>
-    <div>
-      <p>주소 : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호</p>
-      <p>사업자번호 : 224-86-00895 · 대표자 : 김동혁 · e-mail : info@redbutton.co.kr</p>
+    <div class="footer">
+      <div class="footer_logo"><img src="푸터_로고.png" height="100"></div>
+    <div class="footer1">
+      <p><b>주소</b> : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호</p>
+      <p><b>사업자번호</b> : 224-86-00895 · <b>대표자</b> : 김동혁 · e-mail : info@redbutton.co.kr</p>
       <p>COPYRIGHT ⓒ Redbutton co.,Ltd. All rights reserved.</p>
     </div>
-    <div>
-      <p>1644-0641</p>
+    <div class="footer2">
+      <p class="big"><i>1644-0641</i></p>
       <p>오전 9시~12시 / 오후 1시~6시</p>
       <p>(주말, 공휴일 휴무)</p>
     </div>
-
+    </div>
   </footer>
 
-  <button type="button" onclick="location.href='#'"><img src="TOP_button.png" alt=""></button>
+  <button type="button" onclick="location.href='#'" class="top_button"><img src="TOP_button.png" alt="" width="65"></button>
   </body>
 </html
