@@ -7,16 +7,22 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <!-- 헤더 -->
+    <!-- start:헤더 -->
     <header>
       <div class="gnb">
         <div>
-          <img src="GNB_logo.png" width="90" height="90" class="gnb_logo">
+          <img src="img_gnblogo.png" width="90" height="90" class="gnb_logo">
         </div>
         <div class="gnb_menu">
           <nav class="menu">
             <ul>
-              <li><a href="#"><b><i>BRAND</i></b></a></li>
+              <li>
+                <a href="#"><b><i>BRAND</i></b></a>
+                <ul>
+                  <li><a href="#">레드버튼 소개</a></li>
+                  <li><a href="#">채용안내</a></li>
+                </ul>
+              </li>
               <li><a href="#"><b><i>BOARDGAME</i></b></a></li>
               <li><a href="#"><b><i>MENU</i></a></b></li>
               <li><a href="#"><b><i>STORE</i></b></a></li>
@@ -26,28 +32,35 @@
           </nav>
         </div>
         <div class="logo">
-          <img src="GNB_facebook.png" width="30" height="30" class="gnb_logo">
-          <img src="GNB_insta.png" width="30" height="30" class="gnb_logo">
+          <img src="ico_facebook.png" width="30" height="30" class="gnb_logo">
+          <img src="ico_insta.png" width="30" height="30" class="gnb_logo">
         </div>
       </div>
     </header>
+    <!-- end:헤더 -->
+
+    <!-- start:숨겨진 창-->
+    <div class="secret_gnb">
+
+    </div>
 
 <!-- 이벤트 버튼 (삭제 예정)-->
   <input type="radio" name="event_button" id="event1" value="first_event">
   <input type="radio" name="event_button" id="event2" value="second_event">
   <input type="radio" name="event_button" id="event3" value="third_event">
 
-  <!-- 이벤트 광고 -->
+  <!-- start:이벤트 광고 -->
   <div class="main1">
-    <img src="2022-06-21-오뚜기-이벤트.jpg" class="main_img_1">
+    <img src="img_event_1.jpg" class="main_img_1">
     <div class="event_buttons">
       <label for="event1" class="event_button">Button</label>
       <label for="event2" class="event_button">Button</label>
       <label for="event3" class="event_button">Button</label>
     </div> 
   </div>
+  <!-- end:이벤트 광고 -->
 
-  <!-- 공지사항, 검색-->
+  <!-- start:공지사항, 검색-->
   <div class="main2">
     <div class="main2_1">
       <div class="main2_1_2">
@@ -74,8 +87,9 @@
       </div>
     </div>
   </div>
+  <!-- end:공지사항, 검색-->
 
-  <!-- 메뉴 -->
+  <!-- start:메뉴 -->
   <div class="main3">
     <div class="main3_1">
       <P class="big"><i>BUTTONER'S PICK</i></P>
@@ -83,54 +97,72 @@
     </div>
     <div class="main3_2">
       <div>
-        <img src="더블초코라떼.png" class="menu_img_1" height="270">
-        <p class="bold">더블 초코 라떼</p><p>Double Chocolate Latte</p>
+        <img src="img_menu_1.png" class="menu_img_1" height="270">
+        <p class="bold">더블 초코 라떼</p>
+        <p>Double Chocolate Latte</p>
       </div>
       <div>
-        <img src="바닐라라떼.png" class="menu_img_2" height="270">
-        <p class="bold">바닐라 라떼</p><p>Vanilla Latte</p>
+        <img src="img_menu_2.png" class="menu_img_2" height="270">
+        <p class="bold">바닐라 라떼</p>
+        <p>Vanilla Latte</p>
       </div>
       <div>
-        <img src="치킨-포테이토-콤보-1.png" class="menu_img_3" height="270" style="background-color:#edecea">
-        <p class="bold">치킨 포테이토 세트</p><p>Chicken Potato Set</p>
+        <img src="img_menu_3.png" class="menu_img_3" height="270" style="background-color:#edecea">
+        <p class="bold">치킨 포테이토 세트</p>
+        <p>Chicken Potato Set</p>
       </div>
       <div>
-        <img src="허니버터갈릭감자튀김.png" class="menu_img_4" height="270" style="background-color:#edecea">
-        <p class="bold">허니버터갈릭 감자튀김</p><p>Honey Butter Garlic French Fries</p>
+        <img src="img_menu_4.png" class="menu_img_4" height="270" style="background-color:#edecea">
+        <p class="bold">허니버터갈릭 감자튀김</p>
+        <p>Honey Butter Garlic French Fries</p>
       </div>
     </div>
   </div>
+  <!-- end:메뉴 -->
 
-  <!-- 지원 게임 -->
+  <!-- start:지원 게임 -->
   <div class="main4">
-    <p>새 영상설명 지원 게임</p>
-    <br />
-    <p> POWER GRID </p>
-    <p> 파워 그리드 </p>
-    <table>
-      <tr>
-        <td>난이도 Extreme</td>
-        <td>추천인원 4~6인</td>
-        <td>게임시간 120분</td>
-      </tr>
-    </table>
-    <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
-    <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
-
+    <div class="main4-1">
+      <div class="main4-2">
+        <p class="bold">새 영상설명 지원 게임</p>
+        <br />
+        <p class="title"> POWER GRID </p>
+        <p class="subtitle"> 파워 그리드 </p>
+        <table width="450">
+          <tr>
+            <td>난이도 Extreme</td>
+            <td>추천인원 4~6인</td>
+            <td>게임시간 120분</td>
+          </tr>
+        </table>
+        <div>
+          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
+          <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- end:지원 게임 -->
 
-  <!-- 매장 찾기 -->
+  <!-- start:매장 찾기 -->
   <div class="main5">
-    <p class="very_big">Feel redbutton closely</P>
-    <p class="big">매장을 쉽고 빠르게 찾아보세요.</P>
-    <p>즐거움 가득한 레드버튼 매장을 미리 만나보세요!</P>
-
+    <div class="main5_1">
+      <p class="very_big">FEEL REDBUTTON CLOSELY</P>
+        <p class="big">매장을 쉽고 빠르게 찾아보세요.</P>
+        <p class="normal">즐거움 가득한 레드버튼 매장을 미리 만나보세요!</P>
+    </div>
+    <div class="main5_2">
+      매장 검색하기
+    </div>
   </div>
+  <!-- end:매장 찾기 -->
 
-  <!-- 푸터 -->
+  <!-- start:푸터 -->
   <footer>
     <div class="footer">
-      <div class="footer_logo"><img src="푸터_로고.png" height="100"></div>
+      <div class="footer_logo">
+        <img src="img_footerlogo.png" height="100">
+      </div>
     <div class="footer1">
       <p><b>주소</b> : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호</p>
       <p><b>사업자번호</b> : 224-86-00895 · <b>대표자</b> : 김동혁 · e-mail : info@redbutton.co.kr</p>
@@ -143,6 +175,7 @@
     </div>
     </div>
   </footer>
+  <!-- end:푸터 -->
 
   <button type="button" onclick="location.href='#'" class="top_button"><img src="TOP_button.png" alt="" width="65"></button>
   </body>
