@@ -35,17 +35,57 @@ header{
 }
 .menu > ul {
   white-space: nowrap;
-  align-items: center;
 }
 .menu > ul > li {
   display:inline-block;
   padding:calc(6% - 25px);
+  margin:40px 0;
 }
 .menu > ul > li > a {color:white;}
 
 .main1, .main2, .main3, .main4, .main5 {
   margin:0 auto;
   position:relative;
+}
+
+nav li ul {
+  display:none;
+  position: absolute;
+  top:178px;
+  height:150px;
+  text-align: left;
+  font-size:15px;
+  font-weight:500px;
+  line-height:230%;
+}
+
+nav li a{
+  display:block;
+  color:#b2b2ae;
+}
+
+.secret {
+  display:none;
+  position:absolute;
+  top:140px;
+  right:1px;
+  width:100vw;
+  height:215px;
+  background-color: #332f2d;
+  z-index: -1;
+}
+
+.menu > ul:hover ul
+,.menu > ul ul:hover li{
+  display:block;
+  position:absolute;
+}
+
+.secret:hover,
+ul:hover +.secret{
+  display:block;
+  position:absolute;
+  z-index:-1;
 }
 
 /* 이벤트 광고 */
