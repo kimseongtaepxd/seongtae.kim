@@ -73,18 +73,28 @@
     </header>
     <!-- end:헤더 -->
 
-<!-- 이벤트 버튼 (삭제 예정)-->
-  <input type="radio" name="event_button" id="event1" value="first_event">
-  <input type="radio" name="event_button" id="event2" value="second_event">
-  <input type="radio" name="event_button" id="event3" value="third_event">
-
   <!-- start:이벤트 광고 -->
   <div class="main1">
     <img src="img_event_1.jpg" class="main_img_1">
     <div class="event_buttons">
-      <label for="event1" class="event_button">Button</label>
-      <label for="event2" class="event_button">Button</label>
-      <label for="event3" class="event_button">Button</label>
+      <input type="radio" name="event_button" id="event1" value="first_event">
+      <label for="event1" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
+      <input type="radio" name="event_button" id="event2" value="second_event">
+      <label for="event2" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
+      <input type="radio" name="event_button" id="event3" value="third_event">
+      <label label for="event3" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
     </div> 
   </div>
   <!-- end:이벤트 광고 -->
@@ -206,6 +216,6 @@
   </footer>
   <!-- end:푸터 -->
 
-  <button type="button" onclick="location.href='#'" class="top_button"><img src="TOP_button.png" alt="" width="65"></button>
+  <button type="button" onclick="location.href='#'" class="top_button"><img src="ico_topbutton.png" alt="" width="65"></button>
   </body>
 </html

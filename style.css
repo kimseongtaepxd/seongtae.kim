@@ -48,6 +48,7 @@ header{
   position:relative;
 }
 
+/* hover */
 nav li ul {
   display:none;
   position: absolute;
@@ -75,17 +76,17 @@ nav li a{
   z-index: -1;
 }
 
-.menu > ul:hover ul
-,.menu > ul ul:hover li{
+.gnb_menu:hover > .menu li ul{
   display:block;
   position:absolute;
+  z-index:2;
 }
 
 .secret:hover,
 ul:hover +.secret{
   display:block;
   position:absolute;
-  z-index:-1;
+  z-index:1;
 }
 
 /* 이벤트 광고 */
@@ -97,25 +98,33 @@ ul:hover +.secret{
   margin-right:auto;
 }
 
-/* 이벤트 버튼 (삭제 예정)*/
+/* 이벤트 버튼*/
 .event_buttons {
+  display: flex;
   position: absolute;
-
   bottom:55px;
   right:20vw;
 }
-input {
-  all:unset;
-}
-.event_button > label{
-  background:url('푸터_로고.png');
-  background-position:0px 0px;
-  text-indent:-9999px;
-  width:100px;
-  right:50px;
-  top:50px;
 
-  
+.circle {
+  margin: 0 auto;
+  width: 1px;
+  height: 1px;
+  border: 8px solid #410407;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 7px;
+}
+
+input {
+  display:none;
+}
+
+input:checked + label > div > .circle {
+  border-color: #dcba94;
 }
 
 /* 공지사항 검색 */
@@ -199,7 +208,7 @@ input {
   text-align: center;
 }
 .main3_2 > div {
-  padding:calc(2% - 20px);
+  padding:calc(2.8% - 25px);
 }
 .main3_2 > div > p.bold {
   font-size:18px;
