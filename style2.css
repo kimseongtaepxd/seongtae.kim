@@ -1,4 +1,4 @@
-/* 초기화 */
+  /* 초기화 */
 * {margin:0; padding:0;}
 body {font-family:'Helvetica',sans-serif;}
 li {list-style:none;}
@@ -14,38 +14,34 @@ html, body {
 header{
   background:#272422;
   width: 100vw;
-  height: 140px;
+  height: 80px;
+  position: fixed;
+  z-index:1;
 }
 .gnb {
   display:flex; 
   overflow:hidden;
   width:100%;
-  max-width: 1300px;
+  max-width: 750px;
   height: inherit;
   margin:0 auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align : center;
 }
-.gnb_logo {
-  margin:0;
+
+.gnb_menu, .logo {
+  display:none;
 }
 
-.gnb_menu {
-  width:83%;
+.red_button > img.gnb_logo {
+  width:50px;
+  height:50px;
+  background-size:cover;
 }
-.menu > ul {
-  white-space: nowrap;
-}
-.menu > ul > li {
-  display:inline-block;
-  padding:calc(6% - 25px);
-  margin:40px 0;
-}
-.menu > ul > li > a {color:white;}
 
 .mobile_menu {
-  display:none;
+  display: block;
 }
 
 .main1, .main2, .main3, .main4, .main5 {
@@ -97,31 +93,33 @@ ul:hover +.secret{
 /* 이벤트 광고 */
 .main_img_1 {
   display:block; 
-  width:100vw; 
-  max-width:1920px; 
-  margin-left:auto; 
-  margin-right:auto;
+  width:100vw;
+  max-width:767px; 
+  margin-top:50px;
+  content: url(bg_mobileevent_1.jpg);
 }
 
 /* 이벤트 버튼*/
 .event_buttons {
-  display: flex;
-  position: absolute;
-  bottom:55px;
-  right:20vw;
+  display:flex;
+  width:100vw;
+  position:absolute;
+  bottom:30px;
+  right:initial;
+  justify-content: center;
 }
 
 .circle {
   margin: 0 auto;
   width: 1px;
   height: 1px;
-  border: 8px solid #410407;
+  border: 5px solid #410407;
   border-radius: 50%;
   cursor: pointer;
 }
 .wrapper {
   margin: 0 auto;
-  padding: 7px;
+  padding: 6px;
 }
 
 input {
@@ -133,99 +131,110 @@ input:checked + label > div > .circle {
 }
 
 /* 공지사항 검색 */
+.main2_1 {
+  display: none;
+}
 .main2 {
   display:flex;
   overflow:hidden;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  height:180px;
 }
-.main2_1 , .main2_2 {
-  width:50vw;
-  max-width:960px;
-  height:205px;
-}
-.main2_1 {
-  background-color: #ece4d8;
-}
-.main2_1_2 {
-  float:right;
-  width:100%;
-  max-width:600px;
-  margin-top:20px;
-  line-height: 175%;
-}
-.main2 p.big {
+.main2_2_1 > p.big {
   font-size: 20px;
   font-weight: 700;
-  line-height: 200%;
-}
-.main2_1_2 > a.small {
-  color:#949494;
-  font-size: 13px;
-}
-.main2_1_2 > a.more {
-  position: absolute;
-  float:right;
-  right:calc(50vw + 30px);
-  bottom:25px;
+  line-height: 120%;
 }
 .main2_2 {
-  background: url(bg_redbutton_4.jpg);
+  width:100vw;
+  max-width:767px;
+  height:205px;
+  background: url(bg_redbutton_1.jpg);
 }
+
 .main2_2_1 {
-  margin-left:40px;
-  margin-top:20px;
+  margin: 0 0;
+  padding-top:35px;
+  padding-bottom:20px;
 }
-.main2_2_2 {
-  width:130px;
-  height:40px;
-  background-color:#af8967;
+.main2_2_3 {
+  display:block;
+  position: relative;
+  width:196px;
+  height:37px;
+  border:1px solid #7b5c40;
+  border-radius: 5%;
+  margin:0 auto;
+  color:#7b5c40;
   text-align: center;
-  margin-left:40px;
-  margin-top:20px;
-  color:#fff;
-  line-height:40px; /* 세로 중앙 정렬 */
+  line-height:37px; /* 세로 중앙 정렬 */
+  font-size:15px;
+  font-weight:600;
   cursor: pointer;
 }
-.main2_2_3{
-  display: none;
+
+.mobile {
+  display:block;
+  font-size:14px;
+  font-weight: 500;
 }
-.mobile{
-  display: none;
+.main2_2_2 {
+  display:none;
+}
+.pc{
+  display:none;
 }
 
 /* 메뉴 추천*/
 .main3 {
   width:100vw;
-  max-width:1920px;
-  height:675px;
+  max-width:767px;
+  height:382px;
   background-color:#f5f4f2;
   text-align: center;
 }
 
 .main3_1 {
-  padding-top:90px;
-  padding-bottom:56px;
+  padding-top:35px;
+  padding-bottom:20px;
 }
 .main3_1 > p.big {
-  font-size:40px;
-  font-weight: 700;
+  font-size:30px;
+  font-weight: 900;
+}
+.main3_1 > p.big + p{
+  font-size:14px;
 }
 .main3_2 {
   display: flex;
+  width:100%;
   overflow:hidden;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
+  margin:0 auto;
 }
 .main3_2 > div {
-  padding:calc(2.8% - 25px);
+  padding:0px;
 }
 .main3_2 > div > p.bold {
-  font-size:18px;
+  font-size:14px;
   font-weight: bolder;
   line-height: 200%;
-  margin-top:20px;
+  margin-top:10px;
+}
+.main3_2 > div > p.bold + p{
+  font-size:13px;
+}
+.main3_2 img {
+  width:140px;
+  height:160px;
+}
+
+.menu_img_3,.menu_img_3 ~ p, .menu_img_4,.menu_img_4 ~ p {
+  display:none;
 }
 
 /* 지원 게임 */
@@ -392,7 +401,8 @@ button {
   cursor: pointer;
 }
 .top_button {
-  position:fixed;
-  right:80px;
-  bottom:85px;
+  display: none;
 }
+
+
+

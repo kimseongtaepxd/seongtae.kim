@@ -4,13 +4,14 @@
     <title>Main</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" media="(max-width:767px)" href="style2.css"  >
   </head>
   <body>
     <!-- start:헤더 -->
     <header>
       <div class="gnb">
-        <div>
+        <div class="red_button">
           <img src="img_gnblogo.png" width="90" height="90" class="gnb_logo">
         </div>
         <div class="gnb_menu">
@@ -69,6 +70,9 @@
           <img src="ico_facebook.png" width="30" height="30" class="gnb_logo">
           <img src="ico_insta.png" width="30" height="30" class="gnb_logo">
         </div>
+        <div class="mobile_menu">
+          <img src="img_mobilemenu.png" width="25" height="25" class="mm">
+        </div>
       </div>
     </header>
     <!-- end:헤더 -->
@@ -77,7 +81,7 @@
   <div class="main1">
     <img src="img_event_1.jpg" class="main_img_1">
     <div class="event_buttons">
-      <input type="radio" name="event_button" id="event1" value="first_event">
+      <input type="radio" name="event_button" id="event1" value="first_event" checked>
       <label for="event1" class="event_button">
         <div class="wrapper">
           <div class="circle"></div>
@@ -118,11 +122,16 @@
     <div class="main2_2">
       <div class="main2_2_1">
         <p class="big">매장보유게임 검색</p>
-      <P>플레이 할 게임이 방문하실 매장에</P>
-      <P>보유되어 있는지 확인해 보세요</P>
+      <P class="pc">플레이 할 게임이 방문하실 매장에</P>
+      <P class="pc">보유되어 있는지 확인해 보세요</P>
+      <p class="mobile">방문하시려는 매장의</p>
+      <p class="mobile">게임 보유여부를 확인하세요!</p>
       </div>
       <div class="main2_2_2">
         <p>게임 검색하기</p>
+      </div>
+      <div class="main2_2_3">
+        <p>자세히 보기</p>
       </div>
     </div>
   </div>
@@ -161,8 +170,8 @@
 
   <!-- start:지원 게임 -->
   <div class="main4">
-    <div class="main4-1">
-      <div class="main4-2">
+    <div class="main4_1">
+      <div class="main4_2">
         <p class="bold">새 영상설명 지원 게임</p>
         <br />
         <p class="title"> POWER GRID </p>
@@ -179,9 +188,25 @@
           <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
         </div>
       </div>
+      <div class="game_buttons">
+        <input type="radio" name="game_button" id="game1" value="first_game" checked>
+        <label for="game1" class="game_button">
+          <div class="wrapper2">
+            <div class="circle2"></div>
+          </div>
+        </label>
+        <input type="radio" name="game_button" id="game2" value="second_game">
+        <label for="game2" class="game_button">
+          <div class="wrapper2">
+            <div class="circle2"></div>
+          </div>
+        </label>
+      </div> 
     </div>
   </div>
   <!-- end:지원 게임 -->
+
+  <!-- en-->
 
   <!-- start:매장 찾기 -->
   <div class="main5">
