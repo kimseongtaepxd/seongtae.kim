@@ -141,17 +141,20 @@ input:checked + label > div > .circle {
 
 #event1 + .event_button {
   position:absolute;
-  left:500px;
+  top: 667px;
+  right: calc(21vw + 60px);
 }
 
 #event2 + .event_button {
   position:absolute;
-  left:600px;
+  top: 667px;
+  right: calc(21vw + 30px);
 }
 
 #event3 + .event_button {
   position:absolute;
-  left:700px;
+  top: 667px;
+  right:21vw;
 }
 /* 공지사항 검색 */
 .main2 {
