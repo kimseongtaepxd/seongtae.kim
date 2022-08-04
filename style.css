@@ -94,23 +94,29 @@ ul:hover +.secret{
   z-index:1;
 }
 
+/* (수정)08/04 버튼마다 배경 바뀌게 수정 */
 /* 이벤트 광고 */
-.main_img_1 {
+.main_img {
   display:block; 
-  width:100vw; 
+  width:100vw;
   max-width:1920px; 
   margin-left:auto; 
   margin-right:auto;
 }
-
-/* 이벤트 버튼*/
-.event_buttons {
-  display: flex;
-  position: absolute;
-  bottom:55px;
-  right:20vw;
+input#event1:checked ~ div.main_img {
+  width:100vw;
+  content:url(img_event_1.jpg);
+}
+input#event2:checked ~ div.main_img {
+  width:100vw;
+  content:url(img_event_2.jpg);
+}
+input#event3:checked ~ div.main_img {
+  width:100vw;
+  content:url(img_event_3.jpg);
 }
 
+/* 이벤트 버튼*/
 .circle {
   margin: 0 auto;
   width: 1px;
@@ -120,6 +126,7 @@ ul:hover +.secret{
   cursor: pointer;
 }
 .wrapper {
+  position:absolute;
   margin: 0 auto;
   padding: 7px;
 }
@@ -132,6 +139,20 @@ input:checked + label > div > .circle {
   border-color: #dcba94;
 }
 
+#event1 + .event_button {
+  position:absolute;
+  left:500px;
+}
+
+#event2 + .event_button {
+  position:absolute;
+  left:600px;
+}
+
+#event3 + .event_button {
+  position:absolute;
+  left:700px;
+}
 /* 공지사항 검색 */
 .main2 {
   display:flex;
