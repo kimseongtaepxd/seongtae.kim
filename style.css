@@ -96,10 +96,14 @@ ul:hover +.secret{
 
 /* (수정)08/04 버튼마다 배경 바뀌게 수정 */
 /* 이벤트 광고 */
-.main_img {
-  display:block; 
+.main1 {
   width:100vw;
   max-width:1920px; 
+}
+
+.main_img {
+  max-width:1920px; 
+  width:100vw;
   margin-left:auto; 
   margin-right:auto;
 }
@@ -121,7 +125,8 @@ input#event3:checked ~ div.main_img {
   margin: 0 auto;
   width: 1px;
   height: 1px;
-  border: 8px solid #410407;
+  border: 8px solid #000;
+  opacity: 0.7;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -139,21 +144,25 @@ input:checked + label > div > .circle {
   border-color: #dcba94;
 }
 
+.event_button {
+  z-index: 2;
+}
+
 #event1 + .event_button {
   position:absolute;
-  top: 667px;
+  bottom: 86px;
   right: calc(21vw + 60px);
 }
 
 #event2 + .event_button {
   position:absolute;
-  top: 667px;
+  bottom: 86px;;
   right: calc(21vw + 30px);
 }
 
 #event3 + .event_button {
   position:absolute;
-  top: 667px;
+  bottom: 86px;
   right:21vw;
 }
 /* 공지사항 검색 */
@@ -252,6 +261,7 @@ input:checked + label > div > .circle {
   margin-top:20px;
 }
 
+/* (수정)08/05 버튼마다 내용과 배경 바뀌게 수정 */
 /* 지원 게임 */
 table {
   border:1px solid white;
@@ -269,42 +279,72 @@ tr, td {
   height:540px;
   background-color: #2e2d35;
 }
+
 .main4_1 {
+  position: relative;
   width:100vw;
   height:540px;
   max-width:1050px;
   color:#fff;
+}
+
+.main4_2 {
+  display: none;
+}
+
+.main4_3 {
+  display: none;
+}
+
+#game1:checked ~ .main4_2 {
+  display: block;
+  height:540px;
+  background:url(bg_incan_1.jpg);
+  background-position: center;
+  background-size: 1050px;
+  background-repeat: no-repeat;
+}
+
+#game2:checked ~ .main4_3 {
+  display: block;
+  height:540px;
   background:url(bg_powergrid_2.jpg);
   background-position: center;
   background-size: 1050px;
   background-repeat: no-repeat;
 }
-.main4_2{
+
+.main4_2, 
+.main4_3{
   position: relative;
-  top:60px;
 }
-.main4_2 > p.bold {
+.main4_2 > p.bold,
+.main4_3 > p.bold {
   font-size:17px;
   font-weight: bold;
 }
-.main4_2 > p.title {
+.main4_2 > p.title,
+.main4_3 > p.title {
   margin-top:25px; 
   font-size:50px;
   font-weight:800;
   color: #dcba94;
 }
-.main4_2 > p.subtitle {
+.main4_2 > p.subtitle,
+.main4_3 > p.subtitle {
   font-size:25px;
   font-weight:bold;
   color: #dcba94;
 }
-.main4_2 > table {
+.main4_2 > table,
+.main4_3 > table {
   margin-top:20px;
   width:450px;
   height:40px;
   text-align: center;
 }
-.main4_2 > div {
+.main4_2 > div,
+.main4_3 > div {
   position: initial;
   margin-top:20px;
   line-height:180%;
@@ -312,10 +352,17 @@ tr, td {
 }
 
 /* 지원 게임 버튼*/
-.game_buttons {
-  display:flex;
+.game_button {
   position:absolute;
-  bottom:75px;
+  bottom:68px;
+  left:0px;
+  z-index: 1;
+}
+
+#game2 + .game_button{
+  position: absolute;
+  left:27px;
+
 }
 
 .circle2 {
@@ -323,6 +370,7 @@ tr, td {
   width: 1px;
   height: 1px;
   border: 7px solid #000;
+  opacity: 0.7;
   border-radius: 50%;
   cursor: pointer;
 }

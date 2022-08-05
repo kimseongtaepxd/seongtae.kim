@@ -79,25 +79,28 @@
 
   <!-- (수정)08/04 버튼마다 배경 바뀌게 수정-->
   <!-- start:이벤트 광고 -->
+  <main class="main1">
     <input type="radio" name="event_button" id="event1" value="first_event">
-      <label for="event1" class="event_button">
-        <div class="wrapper">
-          <div class="circle"></div>
-        </div>
+    <label for="event1" class="event_button">
+      <div class="wrapper">
+        <div class="circle"></div>
+      </div>
       </label>
     <input type="radio" name="event_button" id="event2" value="second_event" checked>
-      <label for="event2" class="event_button">
-        <div class="wrapper">
-          <div class="circle"></div>
-        </div>
-      </label>
+    <label for="event2" class="event_button">
+      <div class="wrapper">
+        <div class="circle"></div>
+      </div>
+    </label>
     <input type="radio" name="event_button" id="event3" value="third_event">
-      <label label for="event3" class="event_button">
-        <div class="wrapper">
-          <div class="circle"></div>
-        </div>
-      </label>  
+    <label label for="event3" class="event_button">
+      <div class="wrapper">
+        <div class="circle"></div>
+      </div>
+    </label>  
     <div class="main_img"></div>
+  </main>
+    
   <!-- end:이벤트 광고 -->
 
   <!-- start:공지사항, 검색-->
@@ -164,15 +167,51 @@
     </div>
   </div>
   <!-- end:메뉴 -->
-
+  
+  
+  <!-- (수정)08/05 버튼마다 내용과 배경 바뀌게 수정-->
   <!-- start:지원 게임 -->
   <div class="main4">
     <div class="main4_1">
+      <!-- 지원 게임 버튼-->
+      <input type="radio" name="game_button" id="game1" value="first_game" checked>
+      <label for="game1" class="game_button">
+        <div class="wrapper2">
+          <div class="circle2"></div>
+        </div>
+      </label>
+      <input type="radio" name="game_button" id="game2" value="second_game">
+      <label for="game2" class="game_button">
+        <div class="wrapper2">
+          <div class="circle2"></div>
+        </div>
+      </label> 
+
       <div class="main4_2">
+        <br /><br /><br />
         <p class="bold">새 영상설명 지원 게임</p>
         <br />
-        <p class="title"> POWER GRID </p>
-        <p class="subtitle"> 파워 그리드 </p>
+        <p class="title">INGCAN GOLD</p>
+        <p class="subtitle">잉카의 황금</p>
+        <table width="450">
+          <tr>
+            <td>난이도 Normal</td>
+            <td>추천인원 3~8인</td>
+            <td>게임시간 25분</td>
+          </tr>
+        </table>
+        <div>
+          <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면</p>
+          <p>만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+        </div>
+      </div>
+
+      <div class="main4_3">
+        <br /><br /><br />
+        <p class="bold">새 영상설명 지원 게임</p>
+        <br />
+        <p class="title">POWER GRID</p>
+        <p class="subtitle">파워 그리드</p>
         <table width="450">
           <tr>
             <td>난이도 Extreme</td>
@@ -185,20 +224,7 @@
           <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
         </div>
       </div>
-      <div class="game_buttons">
-        <input type="radio" name="game_button" id="game1" value="first_game" checked>
-        <label for="game1" class="game_button">
-          <div class="wrapper2">
-            <div class="circle2"></div>
-          </div>
-        </label>
-        <input type="radio" name="game_button" id="game2" value="second_game">
-        <label for="game2" class="game_button">
-          <div class="wrapper2">
-            <div class="circle2"></div>
-          </div>
-        </label>
-      </div> 
+
     </div>
   </div>
   <!-- end:지원 게임 -->
