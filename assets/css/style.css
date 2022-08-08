@@ -369,20 +369,22 @@ h2.main2_right_title {
 }
 .main4_contents_1 > span.game_title,
 .main4_contents_2 > span.game_title {
-  margin-top:25px; 
+  display: block;
+  margin-top:32px; 
   font-size:50px;
   font-weight:800;
   color: #dcba94;
 }
 .main4_contents_1 > p.game_subtitle,
 .main4_contents_2 > p.game_subtitle {
+  margin-top:11px;
   font-size:25px;
   font-weight:bold;
   color: #dcba94;
 }
 .main4_contents_1 > table,
 .main4_contents_2 > table {
-  margin-top:20px;
+  margin-top:22px;
   width:450px;
   height:40px;
   text-align: center;
@@ -390,7 +392,7 @@ h2.main2_right_title {
 .main4_contents_1 > div.game_content,
 .main4_contents_2 > div.game_content {
   position: initial;
-  margin-top:20px;
+  margin-top:16px;
   line-height:180%;
   color:#a9a9b9;
 }
@@ -485,29 +487,36 @@ footer {
 .footer_logo > img {
   height:100px;
 }
-.footer1{
-  margin-left:calc(4% - 30px);
+.footer_center{
+  margin-left:calc(5% - 30px);
   margin-right:calc(16% - 140px);
   line-height: 180%;
   font-size:15px;
   
 }
-.footer1 b{
+.footer_center strong{
   font-size:16px;
   font-weight: bolder;
 }
 
-.footer2 > .big {
+.footer_right > .phone_number {
   font-size:25px;
   font-weight: 900;
   line-height: 200%;
+}
+
+.footer_right > .opening_hours {
+  font-size:16px;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 /* TOP BUTTON */
 button {
   background-color:transparent;
   border:none;
-  cursor: pointer;
+  cursor:pointer;
+  width:65px;
 }
 .top_button {
   position:fixed;
