@@ -31,18 +31,23 @@ header{
   margin:0;
 }
 
+.gnb > div > img.gnb_logo {
+  width:90px;
+  height:90px;
+}
+
 .gnb_menu {
   width:83%;
 }
-.menu > ul {
+.gnb_menu_nav > ul {
   white-space: nowrap;
 }
-.menu > ul > li {
+.gnb_menu_nav > ul > li {
   display:inline-block;
   padding:calc(6% - 25px);
   margin:40px 0;
 }
-.menu > ul > li > a {color:white;}
+.gnb_menu_nav > ul > li > a {color:white;}
 
 .mobile_menu {
   display:none;
@@ -53,6 +58,11 @@ header{
   position:relative;
 }
 
+.gnb_logo_link > .gnb_facebook,
+.gnb_logo_link > .gnb_insta {
+  width:30px;
+  height:30px;
+}
 /* hover */
 nav li ul {
   display:none;
@@ -70,7 +80,7 @@ nav li a{
   color:#b2b2ae;
 }
 
-.secret {
+.LNB {
   display:none;
   position:absolute;
   top:140px;
@@ -81,14 +91,14 @@ nav li a{
   z-index: -1;
 }
 
-.gnb_menu:hover > .menu li ul{
+.gnb_menu:hover > .gnb_menu_nav li ul{
   display:block;
   position:absolute;
   z-index:2;
 }
 
-.secret:hover,
-ul:hover +.secret{
+.LNB:hover,
+ul:hover +.LNB{
   display:block;
   position:absolute;
   z-index:1;
@@ -101,23 +111,22 @@ ul:hover +.secret{
   max-width:1920px; 
 }
 
-.main_img {
+.main1_bg {
   max-width:1920px; 
-  width:100vw;
   margin-left:auto; 
   margin-right:auto;
 }
-input#event1:checked ~ div.main_img {
+input#event1:checked ~ div.main1_bg {
   width:100vw;
-  content:url(img_event_1.jpg);
+  content:url(../images/img_event_1.jpg);
 }
-input#event2:checked ~ div.main_img {
+input#event2:checked ~ div.main1_bg {
   width:100vw;
-  content:url(img_event_2.jpg);
+  content:url(../images/img_event_2.jpg);
 }
-input#event3:checked ~ div.main_img {
+input#event3:checked ~ div.main1_bg {
   width:100vw;
-  content:url(img_event_3.jpg);
+  content:url(../images/img_event_3.jpg);
 }
 
 /* 이벤트 버튼*/
@@ -172,44 +181,65 @@ input:checked + label > div > .circle {
   justify-content: center;
   align-items: center;
 }
-.main2_1 , .main2_2 {
+.main2_left , .main2_right {
   width:50vw;
   max-width:960px;
   height:205px;
 }
-.main2_1 {
+.main2_left {
   background-color: #ece4d8;
 }
-.main2_1_2 {
+.main2_left_table {
   float:right;
   width:100%;
   max-width:600px;
-  margin-top:20px;
-  line-height: 175%;
+  margin-top:27px;
+  line-height: 160%;
 }
-.main2 p.big {
+
+@media (max-width: 1024px) and (min-width: 800px){
+  .main2_left {
+    width:calc(50vw - 40px);
+    height:205px;
+    padding-left:40px;
+  }
+}
+
+h2.main_left_title,
+h2.main2_right_title {
+  margin-bottom:10px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 200%;
+  line-height: 150%;
 }
-.main2_1_2 > a.small {
+
+.main2 h2.pc {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.main2_left_table .category {
   color:#949494;
   font-size: 13px;
 }
-.main2_1_2 > a.more {
+.main2_left_table > a.more {
   position: absolute;
   float:right;
   right:calc(50vw + 30px);
   bottom:25px;
 }
-.main2_2 {
-  background: url(bg_redbutton_4.jpg);
+.main2_right {
+  background: url(../images/bg_redbutton_4.jpg);
 }
-.main2_2_1 {
+.main2_right_content {
   margin-left:40px;
-  margin-top:20px;
+  margin-top:27px;
 }
-.main2_2_2 {
+.main2_right_content > h2 + span.pc {
+  margin-top:7px;
+
+}
+.main2_right_pc_box {
   width:130px;
   height:40px;
   background-color:#af8967;
@@ -220,7 +250,7 @@ input:checked + label > div > .circle {
   line-height:40px; /* 세로 중앙 정렬 */
   cursor: pointer;
 }
-.main2_2_3{
+.main2_right_mobile_box{
   display: none;
 }
 .mobile{
@@ -231,43 +261,57 @@ input:checked + label > div > .circle {
 .main3 {
   width:100vw;
   max-width:1920px;
-  height:675px;
+  height:700px;
   background-color:#f5f4f2;
   text-align: center;
 }
 
-.main3_1 {
+.main_top {
   padding-top:90px;
-  padding-bottom:56px;
+  padding-bottom:40px;
 }
-.main3_1 > p.big {
+.main_top > .main3_title {
   font-size:40px;
-  font-weight: 700;
+  font-weight: 900;
 }
-.main3_2 {
+.main_top > .main3_subtitle {
+  font-size:17px;
+  font-weight:600;
+  padding-top:10px;
+}
+.main3_bottom {
   display: flex;
   overflow:hidden;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   text-align: center;
 }
-.main3_2 > div {
+.main3_bottom > div {
   padding:calc(2.8% - 25px);
 }
-.main3_2 > div > p.bold {
+.main3_bottom > div > img {
+  height:270px;
+}
+.main3_bottom > div > h2.menu_title {
   font-size:18px;
   font-weight: bolder;
   line-height: 200%;
   margin-top:20px;
 }
+.menu_subtitle {
+  font-size:17px;
+  font-weight:500;
+}
 
 /* (수정)08/05 버튼마다 내용과 배경 바뀌게 수정 */
 /* 지원 게임 */
-table {
+.main4 table {
   border:1px solid white;
   border-collapse: collapse;
+  width: 450px;
 }
-tr, td {
+.main4 tr, 
+.main4 td {
   border:1px solid white;
   padding:5px;
 }
@@ -280,7 +324,7 @@ tr, td {
   background-color: #2e2d35;
 }
 
-.main4_1 {
+.main4_box {
   position: relative;
   width:100vw;
   height:540px;
@@ -288,63 +332,63 @@ tr, td {
   color:#fff;
 }
 
-.main4_2 {
+.main4_contents_1 {
   display: none;
 }
 
-.main4_3 {
+.main4_contents_2 {
   display: none;
 }
 
-#game1:checked ~ .main4_2 {
+#game1:checked ~ .main4_contents_1 {
   display: block;
   height:540px;
-  background:url(bg_incan_1.jpg);
+  background:url(../images/bg_incan_1.jpg);
   background-position: center;
   background-size: 1050px;
   background-repeat: no-repeat;
 }
 
-#game2:checked ~ .main4_3 {
+#game2:checked ~ .main4_contents_2 {
   display: block;
   height:540px;
-  background:url(bg_powergrid_2.jpg);
+  background:url(../images/bg_powergrid_2.jpg);
   background-position: center;
   background-size: 1050px;
   background-repeat: no-repeat;
 }
 
-.main4_2, 
-.main4_3{
+.main4_contents_1, 
+.main4_contents_2{
   position: relative;
 }
-.main4_2 > p.bold,
-.main4_3 > p.bold {
+.main4_contents_1 > .main4_title,
+.main4_contents_2 > .main4_title {
   font-size:17px;
   font-weight: bold;
 }
-.main4_2 > p.title,
-.main4_3 > p.title {
+.main4_contents_1 > span.game_title,
+.main4_contents_2 > span.game_title {
   margin-top:25px; 
   font-size:50px;
   font-weight:800;
   color: #dcba94;
 }
-.main4_2 > p.subtitle,
-.main4_3 > p.subtitle {
+.main4_contents_1 > p.game_subtitle,
+.main4_contents_2 > p.game_subtitle {
   font-size:25px;
   font-weight:bold;
   color: #dcba94;
 }
-.main4_2 > table,
-.main4_3 > table {
+.main4_contents_1 > table,
+.main4_contents_2 > table {
   margin-top:20px;
   width:450px;
   height:40px;
   text-align: center;
 }
-.main4_2 > div,
-.main4_3 > div {
+.main4_contents_1 > div.game_content,
+.main4_contents_2 > div.game_content {
   position: initial;
   margin-top:20px;
   line-height:180%;
@@ -388,31 +432,30 @@ input:checked + label > div > .circle2 {
   width:100vw;
   max-width:1920px;
   height:525px;
-  background:url(bg_redbutton_3.png);
+  background:url(../images/bg_redbutton_3.png);
   background-position: center;
 }
-.main5 > div.main5_1 {
+.main5 > div.main5_contents {
   width:50%;
-  position:relative;
-  left:calc(50% + 20px);
-  top:150px;
+  float: right;
 }
-.main5 p.very_big {
+.main5 h2.main5_title {
+  padding-top:85px;
   font-size:45px;
   font-weight:900;
 }
-.main5 p.big {
-  font-size:25px;
-  font-weight: bolder;
+.main5 h2.main5_subtitle {
+  font-size:27px;
+  font-weight:bolder;
 }
-.main5 p.normal {
-  margin-top:20px;
+.main5 h2.main5_content {
+  margin-top:5px;
+  font-size:17px;
   font-weight:500;
 }
-.main5_2 {
-  position: relative;
-  top:180px;
-  left:calc(50% + 20px);
+.main5_box {
+  display: block;
+  margin-top:37px;
   width:130px;
   height:40px;
   background-color:#d61414;
@@ -438,6 +481,9 @@ footer {
   margin:0 auto;
   justify-content: center;
   align-items: center;
+}
+.footer_logo > img {
+  height:100px;
 }
 .footer1{
   margin-left:calc(4% - 30px);
