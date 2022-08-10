@@ -102,8 +102,32 @@
     </label>  
     <div class="main1_bg"></div>
   </section>
-    
   <!-- end:이벤트 광고 -->
+
+  <!-- start:mobile 이벤트 광고 -->
+  <section class="main1_mobile">
+    <div class="empty"></div>
+    <input type="radio" name="event_button_mobile" id="event1_mobile" value="first_event_mobile" checked>
+    <label for="event1_mobile" class="event_button_mobile">
+      <div class="event_wrapper_mobile">
+        <div class="event_circle_mobile"></div>
+      </div>
+      </label>
+    <input type="radio" name="event_button_mobile" id="event2_mobile" value="second_event_mobile" >
+    <label for="event2_mobile" class="event_button_mobile">
+      <div class="event_wrapper_mobile">
+        <div class="event_circle_mobile"></div>
+      </div>
+    </label>
+    <input type="radio" name="event_button_mobile" id="event3_mobile" value="third_event_mobile" >
+    <label label for="event3_mobile" class="event_button_mobile">
+      <div class="event_wrapper_mobile">
+        <div class="event_circle_mobile"></div>
+      </div>
+    </label>  
+    <div class="main1_bg_mobile"></div>
+  </section>
+  <!-- end:mobile 이벤트 광고 -->
 
   <!-- start:공지사항, 검색-->
   <section class="main2">
@@ -164,18 +188,28 @@
         <h2 class="main2_right_title">매장보유게임 검색</h2>
       <h2 class="pc">플레이 할 게임이 방문하실 매장에</h2>
       <h2 class="pc">보유되어 있는지 확인해 보세요</h2>
-      <h2 class="mobile">방문하시려는 매장의</h2>
-      <h2 class="mobile">게임 보유여부를 확인하세요!</h2>
       </div>
       <div class="main2_right_pc_box">
         <span>게임 검색하기</span>
       </div>
-      <div class="main2_right_mobile_box">
+    </div>
+  </section>
+  <!-- end:공지사항, 검색-->
+
+  <!-- start: mobile 공지사항, 검색-->
+  <section class="main2_mobile">
+    <div class="main2_mobile">
+      <div class="main2_content_mobile">
+        <h2 class="main2_title_mobile">매장보유게임 검색</h2>
+      <h2 class="content_mobile">방문하시려는 매장의</h2>
+      <h2 class="content_mobile">게임 보유여부를 확인하세요!</h2>
+      </div>
+      <div class="main2_mobile_box">
         <span>자세히 보기</span>
       </div>
     </div>
   </section>
-  <!-- end:공지사항, 검색-->
+  <!-- end:mobile 공지사항, 검색-->
 
   <!-- start:메뉴 -->
   <section class="main3">
@@ -207,12 +241,11 @@
     </div>
   </section>
   <!-- end:메뉴 -->
-  
-  
+
   <!-- (수정)08/05 버튼마다 내용과 배경 바뀌게 수정-->
   <!-- start:지원 게임 -->
   <section class="main4">
-    <div class="main4_box">
+    <div class="main4_button_box">
       <!-- 지원 게임 버튼-->
       <input type="radio" name="game_button" id="game1" value="first_game" checked>
       <label for="game1" class="game_button">
@@ -227,28 +260,28 @@
         </div>
       </label> 
 
-      <div class="main4_contents_1">
-        <br /><br /><br />
-        <div class="main4_title">새 영상설명 지원 게임</div>
-        <br />
-        <span class="game_title">INGCAN GOLD</span>
-        <p class="game_subtitle">잉카의 황금</p>
-        <table>
-          <tr>
-            <td>난이도 Normal</td>
-            <td>추천인원 3~8인</td>
-            <td>게임시간 25분</td>
-          </tr>
-        </table>
-        <div class="game_content">
-          <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면</p>
-          <p>만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+      <div class="main4_bg_1">
+        <div class="main4_contents_1">
+          <div class="main4_title">새 영상설명 지원 게임</div>
+          <br />
+          <span class="game_title">INGCAN GOLD</span>
+          <p class="game_subtitle">잉카의 황금</p>
+          <table>
+            <tr>
+              <td>난이도 Normal</td>
+              <td>추천인원 3~8인</td>
+              <td>게임시간 25분</td>
+            </tr>
+          </table>
+          <div class="game_content">
+            <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면<br >만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+          </div>
         </div>
       </div>
 
-      <div class="main4_contents_2">
-        <br /><br /><br />
-        <div class="main4_title">새 영상설명 지원 게임</div>
+      <div class="main4_bg_2">
+        <div class="main4_contents_2">
+          <div class="main4_title">새 영상설명 지원 게임</div>
         <br />
         <span class="game_title">POWER GRID</span>
         <p class="game_subtitle">파워 그리드</p>
@@ -264,12 +297,55 @@
           <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
         </div>
       </div>
-
+      </div>
     </div>
   </section>
   <!-- end:지원 게임 -->
 
-  <!-- en-->
+  <!-- start: mobile 지원 게임 -->
+  <section class="main4_mobile">
+    <div class="main4_button_box_mobile">
+      <!-- 지원 게임 버튼-->
+      <input type="radio" name="game_button_mobile" id="game1_mobile" value="first_game_mobile" checked>
+      <label for="game1_mobile" class="game_button_mobile">
+        <div class="wrapper2_mobile">
+          <div class="circle2_mobile"></div>
+        </div>
+      </label>
+      <input type="radio" name="game_button_mobile" id="game2_mobile" value="second_game_mobile">
+      <label for="game2_mobile" class="game_button_mobile">
+        <div class="wrapper2_mobile">
+          <div class="circle2_mobile"></div>
+        </div>
+      </label> 
+
+      <div class="main4_bg_1_mobile">
+        <div class="main4_contents_1_mobile">
+          <div class="main4_title_mobile">새 영상설명 지원 게임</div>
+          <br />
+          <span class="game_title_mobile">INGCAN GOLD</span>
+          <p class="game_subtitle_mobile">잉카의 황금</p>
+          <div class="game_content_mobile">
+            <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면<br >만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main4_bg_2_mobile">
+        <div class="main4_contents_2_mobile">
+          <div class="main4_title_mobile">새 영상설명 지원 게임</div>
+        <br />
+        <span class="game_title_mobile">POWER GRID</span>
+        <p class="game_subtitle_mobile">파워 그리드</p>
+        <div class="game_content_mobile">
+          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
+          <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- end: mobile 지원 게임 -->
 
   <!-- start:매장 찾기 -->
   <section class="main5">
@@ -279,6 +355,21 @@
         <h2 class="main5_content">즐거움 가득한 레드버튼 매장을 미리 만나보세요!</h2>
         <span class="main5_box">매장 검색하기</span>
     </div>
+  </section>
+
+  <!-- start: mobile 매장 찾기 -->
+  <section class="main5_mobile">
+    <div class="main5_title_mobile">
+      <h2>매장 검색하기</h2>
+    </div>
+    <div class="main5_content_mobile">
+      <h2 >즐거움 가득한 레드버튼 매장을<br > 미리 만나보세요!</h2>
+    </div>
+    <div class="main5_box_mobile">
+      <a href="#자세히 보기">
+        <span>자세히 보기</span>
+      </a>
+    </div>  
   </section>
   <!-- end:매장 찾기 -->
   </main>
@@ -300,10 +391,34 @@
       <h2 class="opening_hours">(주말, 공휴일 휴무)</h2>
     </div>
     </section>
+
+    <!-- start: 모바일 푸터-->
+    <section class="footer_mobile">
+      <div class="footer_top">
+        <div class="footer_topleft">
+          <h2 class="phone_number">1644-0641</h2>
+          <h2 class="opening_hours">오전 9시~12시/오후 1시~6시</h2>
+          <h2 class="opening_hours">(주말,공휴일 휴무)</h2>
+        </div >
+        <div class="footer_topright">
+          <div class="footer_topright_box">
+            <img src="assets/images/ico_facebook.png" class="facebooklogo">
+            <img src="assets/images/ico_insta.png" class="instalogo">
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+          <p class="content"><strong>주소</strong> : 경기도 안양시 동안구 동편로 13번길 65, <br > 넥스트아이빌딩 302호<br >
+          <strong>사업자번호</strong> : 224-86-00895 · <strong>대표자</strong> : 김동혁 <br >e-mail : info@redbutton.co.kr</p>
+          <P class="copyright">COPYRIGHT ⓒ Redbutton co.,Ltd. All rights reserved.</P>
+      </div>
+    </section>
+    <!-- end: 모바일 푸터-->
   </footer>
+  
   <!-- end:푸터 -->
   <!-- end : 수정 : 20220808 tag class 교체  -->
 
-  <button type="button" onclick="location.href='#'" class="top_button"><img src="ico_topbutton.png" alt=""></button>
+  <button type="button" onclick="location.href='#'" class="top_button"><img src="assets/images/ico_topbutton.png" alt=""></button>
   </body>
 </html>
