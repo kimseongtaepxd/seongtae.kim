@@ -11,9 +11,9 @@
     <!-- start : 수정 : 20220808 tag class 교체  -->
     <!-- start:헤더 -->
     <header>
-      <section class="gnb">
+      <div class="gnb">
         <div>
-          <img src="assets/images/img_gnblogo.png" class="gnb_logo">
+          <img src="assets/images/img_gnblogo.png" class="gnb_logo" alt="">
         </div>
         <div class="gnb_menu">
           <nav class="gnb_menu_nav">
@@ -68,13 +68,13 @@
           </nav>
         </div>
         <div class="gnb_logo_link">
-          <img src="assets/images/ico_facebook.png" class="gnb_facebook">
+          <img src="assets/images/ico_facebook.png" class="gnb_facebook" alt="">
           <img src="assets/images/ico_insta.png" class="gnb_insta">
         </div>
         <div class="mobile_menu">
-          <img src="assets/images/img_mobilemenu.png" width="25" height="25" class="mm">
+          <img src="assets/images/img_mobilemenu.png" class="mm" alt="">
         </div>
-      </section>
+      </div>
     </header>
     <!-- end:헤더 -->
 
@@ -82,6 +82,7 @@
   <!-- (수정)08/04 버튼마다 배경 바뀌게 수정-->
   <!-- start:이벤트 광고 -->
   <section class="main1">
+    <div class="empty"></div>
     <input type="radio" name="event_button" id="event1" value="first_event" checked>
     <label for="event1" class="event_button">
       <div class="wrapper">
@@ -104,60 +105,36 @@
   </section>
   <!-- end:이벤트 광고 -->
 
-  <!-- start:mobile 이벤트 광고 -->
-  <section class="main1_mobile">
-    <div class="empty"></div>
-    <input type="radio" name="event_button_mobile" id="event1_mobile" value="first_event_mobile" checked>
-    <label for="event1_mobile" class="event_button_mobile">
-      <div class="event_wrapper_mobile">
-        <div class="event_circle_mobile"></div>
-      </div>
-      </label>
-    <input type="radio" name="event_button_mobile" id="event2_mobile" value="second_event_mobile" >
-    <label for="event2_mobile" class="event_button_mobile">
-      <div class="event_wrapper_mobile">
-        <div class="event_circle_mobile"></div>
-      </div>
-    </label>
-    <input type="radio" name="event_button_mobile" id="event3_mobile" value="third_event_mobile" >
-    <label label for="event3_mobile" class="event_button_mobile">
-      <div class="event_wrapper_mobile">
-        <div class="event_circle_mobile"></div>
-      </div>
-    </label>  
-    <div class="main1_bg_mobile"></div>
-  </section>
-  <!-- end:mobile 이벤트 광고 -->
-
   <!-- start:공지사항, 검색-->
   <section class="main2">
-    <div class="main2_left">
-      <div class="main2_left_table">
-        <h2 class="main_left_title">공지사항</h2>
+    <div class="main2_notice">
+      <div class="main2_notice_table">
+        <h2 class="main2_notice_title">공지사항</h2>
 
         <table>
           <tbody>
-                  <tr>
+            <tr>
               <td>
                 <a href="#1">
                   <div>
                     레드버튼 X 오뚜기 콜라보 이벤트!							
-                    <span class="category">이벤트</span>
+                    <span class="category">이벤트
+                    </span>
                   </div>
                 </a>
               </td>
             </tr>
-                  <tr>
+            <tr>
               <td>
                 <a href="#2">
                   <div>
-                    2021년 한해 사랑받은 버트너스픽							
+                    2021년 한해 사랑받은 버트너스픽	
                     <span class="category">공지</span>
                   </div>
                 </a>
               </td>
             </tr>
-                  <tr>
+            <tr>
               <td>
                 <a href="#3">
                   <div>
@@ -167,77 +144,93 @@
                 </a>
               </td>
             </tr>
-                  <tr>
+            <tr>
               <td>
                 <a href="#4">
                   <div>
                     BIG5 스탬프 쿠폰 이벤트							
-                    <span class="category">이벤트</span>
+                    <span class="category">이벤트
+                    </span>
                   </div>
                 </a>
               </td>
             </tr>
-                </tbody>
+          </tbody>
         </table>
         <a href="#더보기" class="more">더보기></a>
       </div>
     </div>
 
-    <div class="main2_right">
-      <div class="main2_right_content">
-        <h2 class="main2_right_title">매장보유게임 검색</h2>
-      <h2 class="pc">플레이 할 게임이 방문하실 매장에</h2>
-      <h2 class="pc">보유되어 있는지 확인해 보세요</h2>
-      </div>
-      <div class="main2_right_pc_box">
-        <span>게임 검색하기</span>
+    <div class="main2_search">
+      <div>
+        <div class="main2_search_content">
+          <h2 class="main2_search_title">
+            매장보유게임 검색
+          </h2>
+          <h2 class="pc">
+          플레이 할 게임이 방문하실 매장에
+          <br >보유되어 있는지 확인해 보세요
+          </h2>
+        </div>
+        <div class="main2_search_box">
+          <span class="pc">게임 검색하기</span>
+        </div>
       </div>
     </div>
   </section>
   <!-- end:공지사항, 검색-->
 
-  <!-- start: mobile 공지사항, 검색-->
-  <section class="main2_mobile">
-    <div class="main2_mobile">
-      <div class="main2_content_mobile">
-        <h2 class="main2_title_mobile">매장보유게임 검색</h2>
-      <h2 class="content_mobile">방문하시려는 매장의</h2>
-      <h2 class="content_mobile">게임 보유여부를 확인하세요!</h2>
-      </div>
-      <div class="main2_mobile_box">
-        <span>자세히 보기</span>
-      </div>
-    </div>
-  </section>
-  <!-- end:mobile 공지사항, 검색-->
-
   <!-- start:메뉴 -->
   <section class="main3">
-    <div class="main_top">
-      <h2 class="main3_title"><i>BUTTONER'S PICK</i></h2>
-      <h2 class="main3_subtitle">버트너가 선정한 이 달의 메뉴입니다.</h2>
-    </div>
-    <div class="main3_bottom">
-      <div>
-        <img src="assets/images/img_menu_1.png" class="menu_img_1">
-        <h2 class="menu_title">더블 초코 라떼</h2>
-        <h2 class="menu_subtitle">Double Chocolate Latte</h2>
+    <div class="main3_box">
+      <div class="main3_menu">
       </div>
-      <div>
-        <img src="assets/images/img_menu_2.png" class="menu_img_2">
-        <h2 class="menu_title">바닐라 라떼</h2>
-        <h2 class="menu_subtitle">Vanilla Latte</h2>
-      </div>
-      <div>
-        <img src="assets/images/img_menu_3.png" class="menu_img_3" style="background-color:#edecea">
-        <h2 class="menu_title">치킨 포테이토 세트</h2>
-        <h2 class="menu_subtitle">Chicken Potato Set</h2>
-      </div>
-      <div>
-        <img src="assets/images/img_menu_4.png" class="menu_img_4" style="background-color:#edecea">
-        <h2 class="menu_title">허니버터갈릭 감자튀김</h2>
-        <h2 class="menu_subtitle">Honey Butter Garlic French Fries</h2>
-      </div>
+        <h2 class="main3_title">
+          BUTTONER'S PICK
+        </h2>
+        <div class="main3_subtitle_box">
+          <h2 class="main3_subtitle">
+            버트너가 선정한 이 달의 메뉴입니다.
+          </h2>
+        </div>
+        <section class="main3_menu">
+          <div>
+            <img src="assets/images/img_menu_1.png" class="menu_img" alt="">
+            <h2 class="menu_title">
+              더블 초코 라떼
+            </h2>
+            <h2 class="menu_subtitle">
+              Double Chocolate Latte
+            </h2>
+          </div>
+          <div>
+            <img src="assets/images/img_menu_2.png" class="menu_img" alt="">
+            <h2 class="menu_title">
+              바닐라 라떼
+            </h2>
+            <h2 class="menu_subtitle">
+              Vanilla Latte
+            </h2>
+          </div>
+          <div>
+            <img src="assets/images/img_menu_3.png" class="menu_img"  alt="">
+            <h2 class="menu_title">
+              치킨 포테이토 세트
+            </h2>
+            <h2 class="menu_subtitle">
+              Chicken Potato Set
+            </h2>
+          </div>
+          <div>
+            <img src="assets/images/img_menu_4.png" class="menu_img" alt="">
+            <h2 class="menu_title">
+              허니버터갈릭 감자튀김
+            </h2>
+            <h2 class="menu_subtitle">
+              Honey Butter Garlic French Fries
+            </h2>
+          </div>
+        </section>
     </div>
   </section>
   <!-- end:메뉴 -->
@@ -293,8 +286,7 @@
           </tr>
         </table>
         <div class="game_content">
-          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
-          <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
+          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.<br >전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
         </div>
       </div>
       </div>
@@ -302,83 +294,32 @@
   </section>
   <!-- end:지원 게임 -->
 
-  <!-- start: mobile 지원 게임 -->
-  <section class="main4_mobile">
-    <div class="main4_button_box_mobile">
-      <!-- 지원 게임 버튼-->
-      <input type="radio" name="game_button_mobile" id="game1_mobile" value="first_game_mobile" checked>
-      <label for="game1_mobile" class="game_button_mobile">
-        <div class="wrapper2_mobile">
-          <div class="circle2_mobile"></div>
-        </div>
-      </label>
-      <input type="radio" name="game_button_mobile" id="game2_mobile" value="second_game_mobile">
-      <label for="game2_mobile" class="game_button_mobile">
-        <div class="wrapper2_mobile">
-          <div class="circle2_mobile"></div>
-        </div>
-      </label> 
-
-      <div class="main4_bg_1_mobile">
-        <div class="main4_contents_1_mobile">
-          <div class="main4_title_mobile">새 영상설명 지원 게임</div>
-          <br />
-          <span class="game_title_mobile">INGCAN GOLD</span>
-          <p class="game_subtitle_mobile">잉카의 황금</p>
-          <div class="game_content_mobile">
-            <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면<br >만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="main4_bg_2_mobile">
-        <div class="main4_contents_2_mobile">
-          <div class="main4_title_mobile">새 영상설명 지원 게임</div>
-        <br />
-        <span class="game_title_mobile">POWER GRID</span>
-        <p class="game_subtitle_mobile">파워 그리드</p>
-        <div class="game_content_mobile">
-          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.</p>
-          <p>전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  <!-- end: mobile 지원 게임 -->
-
   <!-- start:매장 찾기 -->
   <section class="main5">
     <div class="main5_contents">
-      <h2 class="main5_title">FEEL REDBUTTON CLOSELY</h2>
-        <h2 class="main5_subtitle">매장을 쉽고 빠르게 찾아보세요.</h2>
-        <h2 class="main5_content">즐거움 가득한 레드버튼 매장을 미리 만나보세요!</h2>
-        <span class="main5_box">매장 검색하기</span>
+      <h2 class="main5_title pc">
+        FEEL REDBUTTON CLOSELY
+      </h2>
+      <h2 class="main5_subtitle">
+        매장을 쉽고 빠르게 찾아보세요.
+      </h2>
+      <div class="main5_content">
+        <h2>
+          즐거움 가득한 레드버튼 매장을 미리 만나보세요!
+        </h2>
+      </div>
+      <span class="main5_box pc">
+          매장 검색하기
+      </span>
     </div>
   </section>
-
-  <!-- start: mobile 매장 찾기 -->
-  <section class="main5_mobile">
-    <div class="main5_title_mobile">
-      <h2>매장 검색하기</h2>
-    </div>
-    <div class="main5_content_mobile">
-      <h2 >즐거움 가득한 레드버튼 매장을<br > 미리 만나보세요!</h2>
-    </div>
-    <div class="main5_box_mobile">
-      <a href="#자세히 보기">
-        <span>자세히 보기</span>
-      </a>
-    </div>  
-  </section>
-  <!-- end:매장 찾기 -->
   </main>
 
   <!-- start:푸터 -->
   <footer>
     <section class="footer">
       <div class="footer_logo">
-        <img src="assets/images/img_footerlogo.png" >
+        <img src="assets/images/img_footerlogo.png" alt="">
       </div>
     <div class="footer_center">
       <p><strong>주소</strong> : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호<br>
@@ -402,8 +343,8 @@
         </div >
         <div class="footer_topright">
           <div class="footer_topright_box">
-            <img src="assets/images/ico_facebook.png" class="facebooklogo">
-            <img src="assets/images/ico_insta.png" class="instalogo">
+            <img src="assets/images/ico_facebook.png" class="facebooklogo" alt="">
+            <img src="assets/images/ico_insta.png" class="instalogo" alt="">
           </div>
         </div>
       </div>

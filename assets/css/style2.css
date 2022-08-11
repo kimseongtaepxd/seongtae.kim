@@ -3,31 +3,33 @@
 body {font-family:'Helvetica',sans-serif;}
 li {list-style:none;}
 a {text-decoration:none; color:#000;}
-body {min-width:760px;}
-
+body {min-width:auto;}
+.mobile{display: block;}
+.pc{display: none;}
 
 /* 헤더 */
 html, body {
   margin:0 auto;
-  overflow-x:hidden; overflow-y:auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+  width:calc(100vw - 17px);
 }
 header{
   background:#272422;
-  width: 100vw;
-  height: 80px;
+  width: 100%;
+  height: 81px;
   position: fixed;
-  z-index:1;
+  z-index:3;
 }
 .gnb {
   display:flex; 
   overflow:hidden;
   width:100%;
-  max-width: 750px;
-  height: inherit;
-  margin:0 auto;
+  max-width: 767px;
+  height: 50px;
+  padding: 14px 20px;
   justify-content: space-between;
-  align-items: center;
-  text-align : center;
+  
 }
 
 .gnb_menu, .gnb_logo_link {
@@ -35,12 +37,17 @@ header{
 }
 
 .gnb > div > img.gnb_logo {
-  width:50px;
-  height:50px;
+  width:52px;
+  height:52px;
 }
 
 .mobile_menu {
   display: block;
+}
+
+.mobile_menu > img.mm {
+  width:26px;
+  height:22px;
 }
 
 .main1, .main2, .main3, .main4, .main5 {
@@ -70,7 +77,7 @@ nav li a{
   position:absolute;
   top:140px;
   right:1px;
-  width:100vw;
+  width:100%;
   height:215px;
   background-color: #332f2d;
   z-index: -1;
@@ -91,37 +98,35 @@ ul:hover +.secret{
 
 /* 이벤트 광고 */
 .main1 {
-  display: none;
-}
-.main1_mobile {
-  display: block;
-  position: relative;
-}
-.main1_bg_mobile {
-  display:block; 
-  width:calc(100vw -17px);
+  width:100%;
   max-width:767px; 
 }
-input#event1_mobile:checked ~ div.main1_bg_mobile {
-  width:100vw;
+
+.main1_bg {
+  max-width:767px; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+input#event1:checked ~ div.main1_bg {
+  width:100%;
   content:url(../images/bg_mobileevent_1.jpg);
 }
-input#event2_mobile:checked ~ div.main1_bg_mobile {
-  width:100vw;
+input#event2:checked ~ div.main1_bg {
+  width:100%;
   content:url(../images/bg_mobileevent_2.jpg);
 }
-input#event3_mobile:checked ~ div.main1_bg_mobile {
-  width:100vw;
+input#event3:checked ~ div.main1_bg {
+  width:100%;
   content:url(../images/bg_mobileevent_3.jpg);
 }
 
 .empty {
-  width: 100vw;
-  height: 80px;
+  width: 100%;
+  height: 81px;
 }
 
 /* 이벤트 버튼*/
-.event_circle_mobile {
+.circle {
   margin: 0 auto;
   width: 1px;
   height: 1px;
@@ -130,7 +135,7 @@ input#event3_mobile:checked ~ div.main1_bg_mobile {
   cursor: pointer;
   z-index:2;
 }
-.event_wrapper_mobile {
+.wrapper {
   margin: 0 auto;
   padding: 6px;
 }
@@ -139,123 +144,151 @@ input {
   display:none;
 }
 
-input:checked + label > div > .event_circle_mobile {
+input:checked + label > div > .circle {
   border-color: #dcba94;
 }
 
 
-#event3_mobile + .event_button_mobile {
+#event3 + .event_button {
   position:absolute;
-  top: 870px;
-  right:calc(50% - 40px);
+  bottom: 30px;
+  right:calc(50% - 15px);
 }
 
-#event2_mobile + .event_button_mobile {
+#event2 + .event_button {
   position:absolute;
-  top: 870px;
-  right:calc(50% - 19px);
+  bottom: 30px;
+  right:calc(50% + 10px);
 }
 
-#event1_mobile + .event_button_mobile {
+#event1 + .event_button {
   position:absolute;
-  top: 870px;
-  right:calc(50% + 2px);
+  bottom: 30px;
+  right:calc(50% + 35px);
 }
 
 /* 공지사항 검색 */
-.main2 {
+.main2_notice {
   display: none;
 }
-.main2_mobile {
+
+.main2 {
   display:block;
   overflow:hidden;
-  text-align: center;
   height:183px;
-  width:100vw;
+}
+.main2_search {
+  width:100%;
+  height:183px;
   max-width:767px;
-  background: url(../images/bg_redbutton_1.jpg);
+  background-image: url(../images/bg_redbutton_1.jpg);
 }
 
-.main2_content_mobile {
-  margin: 0 0;
-  padding-top:35px;
-  padding-bottom:20px;
+.main2_search > div {
+  width:100%;
+  padding:33px 0px 36px;
 }
-.main2_mobile_box {
-  display:block;
-  position: relative;
-  width:196px;
-  height:37px;
-  border:1px solid #7b5c40;
-  border-radius: 5%;
-  margin:0 auto;
-  color:#7b5c40;
+h2.main2_search_title {
+  height:17px;
+  margin-bottom:0px;
   text-align: center;
-  line-height:37px; /* 세로 중앙 정렬 */
-  font-size:15px;
-  font-weight:600;
-  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 17px;
 }
 
-.content_mobile {
-  display:block;
-  font-size:14px;
+.main2_search_content:after {
+  display: block;
+  content:'방문하시려는 매장의\A 게임 보유여부를 확인하세요!';
+  white-space: pre;
+  height:40px;
+  text-align: center;
+  font-size: 14px;
   font-weight: 500;
 }
 
+.main2_search_content {
+  margin: 0 0 20px;
+}
+.main2_search_box:after {
+  display: block;
+  content:"자세히보기";
+  height:19px;
+  margin:0px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 19px;
+}
+.main2_search_box {
+  width:75px;
+  height: 18px;
+  padding: 8px 62px; 
+  background-color: transparent;
+  border:1.5px solid #7B5C40;
+  border-radius: 3px;
+  color:#7B5C40;
+  text-align: center;
+  margin:0 auto;
+  cursor: pointer;
+}
 /* 메뉴 추천*/
 .main3 {
-  display:none;
-}
-
-.main3_mobile {
-  width:100vw;
+  width:100%;
   max-width:767px;
-  height:382px;
+  height:285.5px;
+  padding: 35px 20px 58px;
   background-color:#f5f4f2;
   text-align: center;
 }
 
-.main_top {
-  padding-top:35px;
-  padding-bottom:20px;
-}
-.main_top > h2.main3_title {
-  font-size:30px;
-  font-weight: 900;
-}
-.main_top > h2.main3_title + h2 {
-  font-size:14px;
-}
-.main3_bottom {
-  display: flex;
+.main3_box {
   width:100%;
-  height:200px;
-  overflow:hidden;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+  max-width:767px;
   margin:0 auto;
 }
-.main3_bottom > div {
-  padding:0px;
+
+.main3_title {
+  width:100%;
+  height: 40px;
+  font-size:36px;
+  font-weight: 900;
+  color:#19140f;
+  line-height: 40px;
 }
-.main3_bottom > div > h2.menu_title {
+.main3_subtitle_box {
+  height:36px;
+}
+.main3_subtitle {
+  height: 16px;
+  font-size:14px;
+  font-weight:600;
+  line-height: 14px;
+}
+.main3_menu {
+  display: flex;
+  overflow:hidden;
+  width:175%;
+  justify-content: space-between;
+  align-items: top;
+  text-align: center;
+}
+.main3_menu > div {
+  width:23%;
+}
+.main3_menu div img {
+  width:140px;
+  height:157.5px;
+  background-color:#EDECEA
+}
+.main3_menu > div > h2.menu_title {
   font-size:14px;
   font-weight: bolder;
   line-height: 200%;
-  margin-top:10px;
+  margin-top:5px;
 }
-.main3_bottom > div > h2.menu_title + h2{
-  font-size:13px;
-}
-.main3_bottom img {
-  width:140px;
-  height:10px;
-}
-
-.menu_img_3,.menu_img_3 ~ h2, .menu_img_4,.menu_img_4 ~ h2 {
-  display:none;
+.menu_subtitle {
+  font-size:12px;
+  font-weight:500;
 }
 
 /* (수정)08/05 버튼마다 내용과 배경 바뀌게 수정 */
@@ -264,28 +297,28 @@ input:checked + label > div > .event_circle_mobile {
   display: none;
 }
 
-.main4_mobile {
+.main4 {
   display:block;
-  width:calc(100vw - 17px);
+  width:100%;
   height:488px;
   background-color: #2e2d35;
 }
 
-.main4_button_box_mobile {
-  width:100%;
-  height:488px;
+.main4_button_box {
+  width:95%;
+  height:448px;
 }
-.main4_bg_1_mobile,
-.main4_bg_2_mobile,
-.main4_contents_1_mobile > table,
-.main4_contents_2_mobile > table {
+.main4_bg_1,
+.main4_bg_2,
+.main4_contents_1 > table,
+.main4_contents_2 > table {
   display: none;
 }
 
-#game1_mobile:checked ~ .main4_bg_1_mobile {
+#game1:checked ~ .main4_bg_1 {
   display: block;
   position: relative;
-  width:100vw;
+  width:100%;
   height:448px;
   max-width:1050px;
   color:#fff;
@@ -295,16 +328,16 @@ input:checked + label > div > .event_circle_mobile {
   background-repeat: no-repeat;
 }
 
-#game1_mobile:checked ~ .main4_bg_1_mobile > .main4_contents_1_mobile{
+#game1:checked ~ .main4_bg_1 > .main4_contents_1{
   display: block;
   top:24px;
   left:20px;
 }
 
-#game2_mobile:checked ~ .main4_bg_2_mobile {
+#game2:checked ~ .main4_bg_2 {
   display: block;
   position: relative;
-  width:100vw;
+  width:100%;
   height:448px;
   max-width:1050px;
   color:#fff;
@@ -314,24 +347,24 @@ input:checked + label > div > .event_circle_mobile {
   background-repeat: no-repeat;
 }
 
-#game2_mobile:checked ~ .main4_bg_2_mobile > .main4_contents_2_mobile{
+#game2:checked ~ .main4_bg_2 > .main4_contents_2{
   display: block;
   top:24px;
   left:20px;
 }
-.main4_contents_1_mobile, 
-.main4_contents_2_mobile{
+.main4_contents_1, 
+.main4_contents_2{
   position: relative;
   
 }
-.main4_contents_1_mobile > .main4_title_mobile,
-.main4_contents_2_mobile > .main4_title_mobile {
+.main4_contents_1 > .main4_title,
+.main4_contents_2 > .main4_title {
   display:block;
   font-size:14px;
   font-weight: bold;
 }
-.main4_contents_1_mobile > span.game_title_mobile,
-.main4_contents_2_mobile > span.game_title_mobile {
+.main4_contents_1 > span.game_title,
+.main4_contents_2 > span.game_title {
   display: block;
   height:40px;
   margin-top:248px; 
@@ -341,44 +374,51 @@ input:checked + label > div > .event_circle_mobile {
   line-height: 40px;
   color: #dcba94;
 }
-.main4_contents_1_mobile > p.game_subtitle_mobile,
-.main4_contents_2_mobile > p.game_subtitle_mobile {
+.main4_contents_1 > p.game_subtitle,
+.main4_contents_2 > p.game_subtitle {
   margin-bottom:11px;
   font-size:16px;
   font-weight:bold;
   text-align: center;
-  line-height: 24px;
   color: #dcba94;
 }
 
-.main4_contents_1_mobile > div.game_content_mobile,
-.main4_contents_2_mobile > div.game_content_mobile {
+.main4_contents_1 > div.game_content,
+.main4_contents_2 > div.game_content {
   position: initial;
-  margin-left:50px;
   margin-bottom:14.4px;
   font-size:14px;
-  line-height:180%;
+  line-height:140%;
   color:#a9a9b9;
 }
 
+.main4_contents_1 > div.game_content > p,
+.main4_contents_2 > div.game_content > p {
+  float: left;
+  width:100%;
+  max-width:380px;
+  height:40px;
+  text-align: center;
+}
+
 /* 지원 게임 버튼*/
-.game_button_mobile {
+.game_button {
   position:absolute;
   bottom:20px;
   z-index: 1;
 }
 
-#game1_mobile + .game_button_mobile{
+#game1 + .game_button{
   position: absolute;
-  left:calc(50% - 10px);
+  left:calc(50% + 10px);
 }
 
-#game2_mobile + .game_button_mobile{
+#game2 + .game_button{
   position: absolute;
-  left:calc(50% - 55px);
+  left:calc(50% - 35px);
 }
 
-.circle2_mobile {
+.circle2 {
   margin: 0 auto;
   width: 1px;
   height: 1px;
@@ -387,72 +427,77 @@ input:checked + label > div > .event_circle_mobile {
   border-radius: 50%;
   cursor: pointer;
 }
-.wrapper2_mobile {
+.wrapper2 {
   margin: 0 auto;
   padding: 6px;
 }
 
-input:checked + label > div > .circle2_mobile {
+input:checked + label > div > .circle2 {
   border-color: #dcba94;
 }
 
 /* 매장 찾기  */
-.main5 {
+
+.main5_title,
+.main5_subtitle {
   display: none;
 }
-
-.main5_mobile {
-  display: block;
-  width: calc(100vw - 17px);
+.main5 {
+  width:100%;
   height:340px;
-  color:#333;
-  background:url(../images/bg_redbutton_2.jpg);
+  background-image:url(../images/bg_redbutton_2.jpg);
+  background-color:#D9E5FF;
   background-position: center;
 }
 
-.main5_title_mobile {
-  position: relative;
-  width:100%;
-  height:57px;
+.main5_content > h2 {
+  display: none;
 }
-
-.main5_title_mobile > h2 {
-  position: absolute;
-  bottom:0px;
-  left:calc(50% - 60px);
-  height:24px;
+.main5_content::before {
+  display: block;
+  content: '매장 검색하기';
   font-size:20px;
+  font-weight:700;
+  text-align: center;
+  margin-top:30px;
 }
-.main5_content_mobile {
-  margin-top:5px;
-  width:100%;
-  height:60px;
-}
-.main5_content_mobile > h2 {
+
+.main5_content:after {
+  display: block;
+  height:40px;
+  margin-bottom:20px;
+  content: '즐거움 가득한 레드버튼 매장을\a미리 만나보세요!';
+  white-space:pre;
   font-size:14px;
-}
-.main5_box_mobile {
-  height:37px;
+  font-weight:500;
   text-align: center;
 }
-.main5_box_mobile > a{
-  width:180px;
+
+.main5 > div.main5_contents {
+  width:100%;
+  float: center;
+}
+
+span.main5_box {
+  display: none;
+}
+.main5_contents:after {
+  display: block;
+  content:'자세히 보기';
+  width:194.7px;
   height:37px;
-  padding:8px 62px;
-  border: 1px solid #7b5c40;
+  line-height: 37px;
+  margin: 0 auto;
+  background-color:transparent;
+  text-align: center;
+  color:#7B5C40;
+  border:1px solid #7B5C40;
   border-radius: 3px;
-}
-.main5_box_mobile > a > span{
-  font-size: 15px;
-  font-weight: 900;
-  color:#7b5c40;
-}
-
-
-
-.main5_title_mobile,
-.main5_content_mobile{
-  text-align: center;
+  line-height:40px;
+  cursor: pointer;
+  font-size:15px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* 푸터 */
@@ -466,7 +511,7 @@ input:checked + label > div > .circle2_mobile {
 }
 
 footer {
-  width:calc(100vw - 17px);
+  width:100%;
   height:296px;
 }
 
@@ -524,7 +569,7 @@ footer {
   width:100%;
   height:184px;
   margin-top : 34px;
-  padding : 30px 20px 0px;
+  padding : 25px 20px 0px;
   border-top: 1px solid #333;
   text-align: center;
 }

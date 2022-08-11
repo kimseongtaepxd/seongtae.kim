@@ -4,23 +4,23 @@ body {font-family:'Helvetica',sans-serif;}
 li {list-style:none;}
 a {text-decoration:none; color:#000;}
 body {min-width:760px;}
-
+.mobile{display: none;}
+.pc{display: block;}
 
 /* 헤더 */
 html, body {
   margin:0 auto;
   overflow-x:hidden; overflow-y:auto;
+  width:100%
 }
 header{
   background:#272422;
-  width: 100vw;
+  width: 100%;
   height: 140px;
 }
 .gnb {
   display:flex; 
   overflow:hidden;
-  width:100%;
-  max-width: 1300px;
   height: inherit;
   margin:0 auto;
   justify-content: center;
@@ -85,7 +85,7 @@ nav li a{
   position:absolute;
   top:140px;
   right:1px;
-  width:100vw;
+  width:100%;
   height:215px;
   background-color: #332f2d;
   z-index: -1;
@@ -107,7 +107,7 @@ ul:hover +.LNB{
 /* (수정)08/04 버튼마다 배경 바뀌게 수정 */
 /* 이벤트 광고 */
 .main1 {
-  width:100vw;
+  width:100%;
   max-width:1920px; 
 }
 
@@ -117,15 +117,15 @@ ul:hover +.LNB{
   margin-right:auto;
 }
 input#event1:checked ~ div.main1_bg {
-  width:100vw;
+  width:100%;
   content:url(../images/img_event_1.jpg);
 }
 input#event2:checked ~ div.main1_bg {
-  width:100vw;
+  width:100%;
   content:url(../images/img_event_2.jpg);
 }
 input#event3:checked ~ div.main1_bg {
-  width:100vw;
+  width:100%;
   content:url(../images/img_event_3.jpg);
 }
 
@@ -160,19 +160,19 @@ input:checked + label > div > .circle {
 #event1 + .event_button {
   position:absolute;
   bottom: 86px;
-  right: calc(21vw + 60px);
+  right: calc(21% + 60px);
 }
 
 #event2 + .event_button {
   position:absolute;
   bottom: 86px;
-  right: calc(21vw + 30px);
+  right: calc(21% + 30px);
 }
 
 #event3 + .event_button {
   position:absolute;
   bottom: 86px;
-  right:21vw;
+  right:21%;
 }
 /* 공지사항 검색 */
 .main2_mobile {
@@ -185,15 +185,15 @@ input:checked + label > div > .circle {
   justify-content: center;
   align-items: center;
 }
-.main2_left , .main2_right {
-  width:50vw;
+.main2_notice , .main2_search {
+  width:50%;
   max-width:960px;
   height:205px;
 }
-.main2_left {
+.main2_notice {
   background-color: #ece4d8;
 }
-.main2_left_table {
+.main2_notice_table {
   float:right;
   width:100%;
   max-width:600px;
@@ -201,16 +201,16 @@ input:checked + label > div > .circle {
   line-height: 160%;
 }
 
-@media (max-width: 1024px) and (min-width: 800px){
-  .main2_left {
-    width:calc(50vw - 40px);
+@media (max-width: 1024px) and (min-width: 767px){
+  .main2_notice {
+    width:calc(50% - 40px);
     height:205px;
     padding-left:40px;
   }
 }
 
-h2.main_left_title,
-h2.main2_right_title {
+h2.main2_notice_title,
+h2.main2_search_title {
   margin-bottom:10px;
   font-size: 20px;
   font-weight: 700;
@@ -222,28 +222,28 @@ h2.main2_right_title {
   font-weight: 500;
   line-height: 150%;
 }
-.main2_left_table .category {
+.main2_notice_table .category {
   color:#949494;
   font-size: 13px;
 }
-.main2_left_table > a.more {
+.main2_notice_table > a.more {
   position: absolute;
   float:right;
-  right:calc(50vw + 30px);
+  right:calc(50% + 30px);
   bottom:25px;
 }
-.main2_right {
+.main2_search {
   background: url(../images/bg_redbutton_4.jpg);
 }
-.main2_right_content {
+.main2_search_content {
   margin-left:40px;
   margin-top:27px;
 }
-.main2_right_content > h2 + span.pc {
+.main2_search_content > h2 + span.pc {
   margin-top:0px;
 
 }
-.main2_right_pc_box {
+.main2_search_box {
   width:130px;
   height:40px;
   background-color:#af8967;
@@ -254,7 +254,7 @@ h2.main2_right_title {
   line-height:40px; /* 세로 중앙 정렬 */
   cursor: pointer;
 }
-.main2_right_mobile_box{
+.main2_search_mobile_box{
   display: none;
 }
 .mobile{
@@ -267,40 +267,53 @@ h2.main2_right_title {
 }
 
 .main3 {
-  width:100vw;
+  width:100%;
   max-width:1920px;
-  height:700px;
+  height:495px;
   background-color:#f5f4f2;
   text-align: center;
+  padding: 73px 0px 103px;
 }
 
-.main_top {
-  padding-top:90px;
-  padding-bottom:40px;
+.main3_box {
+  width:100%;
+  max-width:1194px;
+  margin:0 auto;
 }
-.main_top > .main3_title {
-  font-size:40px;
+
+.main3_title {
+  width:100%;
+  height: 72px;
+  font-size:54px;
   font-weight: 900;
+  color:#19140f;
+  line-height: 72px;
 }
-.main_top > .main3_subtitle {
+.main3_subtitle_box {
+  height:78px;
+}
+.main3_subtitle {
+  height: 28px;
   font-size:17px;
   font-weight:600;
-  padding-top:10px;
+  line-height: 28px;
 }
-.main3_bottom {
+.main3_menu {
   display: flex;
   overflow:hidden;
   justify-content: center;
   align-items: top;
   text-align: center;
 }
-.main3_bottom > div {
-  padding:calc(2.8% - 25px);
+.main3_menu > div {
+  width:25%;
 }
-.main3_bottom > div > img {
+.main3_menu div img {
+  width:240px;
   height:270px;
+  background-color:#EDECEA
 }
-.main3_bottom > div > h2.menu_title {
+.main3_menu > div > h2.menu_title {
   font-size:18px;
   font-weight: bolder;
   line-height: 200%;
@@ -330,7 +343,7 @@ h2.main2_right_title {
 .main4 {
   display:flex;
   justify-content: center;
-  width:100vw;
+  width:100%;
   max-width:1920px;
   height:540px;
   background-color: #2e2d35;
@@ -352,7 +365,7 @@ h2.main2_right_title {
 
 #game1:checked ~ .main4_bg_1 {
   position: relative;
-  width:100vw;
+  width:100%;
   height:540px;
   max-width:1050px;
   color:#fff;
@@ -371,7 +384,7 @@ h2.main2_right_title {
 
 #game2:checked ~ .main4_bg_2 {
   position: relative;
-  width:100vw;
+  width:100%;
   height:540px;
   max-width:1050px;
   color:#fff;
@@ -456,11 +469,8 @@ input:checked + label > div > .circle2 {
 }
 
 /* 매장 찾기  */
-.main5_mobile {
-  display: none;
-}
 .main5 {
-  width:100vw;
+  width:100%;
   max-width:1920px;
   height:525px;
   background-image:url(../images/bg_redbutton_3.png);
@@ -499,7 +509,7 @@ input:checked + label > div > .circle2 {
 
 /* 푸터 */
 footer {
-  width:100vw;
+  width:100%;
   height:215px;
   background-color:#272422;
   color:#8c8c8c;
