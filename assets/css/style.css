@@ -4,13 +4,16 @@ body {font-family:'Helvetica',sans-serif;}
 li {list-style:none;}
 a {text-decoration:none; color:#000;}
 body {min-width:760px;}
-.mobile{display: none;}
-.pc{display: block;}
+
 
 /* 헤더 */
 html, body {
   margin:0 auto;
   width:calc(100vw -17px);
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 header{
   background:#272422;
@@ -491,7 +494,7 @@ input:checked + label > div > .circle2 {
   font-size:27px;
   font-weight:bolder;
 }
-.main5 h2.main5_content {
+.main5 .main5_content h2 {
   margin-top:5px;
   font-size:17px;
   font-weight:500;
