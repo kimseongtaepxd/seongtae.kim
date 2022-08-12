@@ -551,6 +551,10 @@ footer {
   line-height: 150%;
 }
 
+.footer_ico {
+  display: none;
+}
+
 .footer_mobile {
   display: none;
 }
