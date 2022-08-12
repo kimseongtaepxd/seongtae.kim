@@ -4,14 +4,16 @@ body {font-family:'Helvetica',sans-serif;}
 li {list-style:none;}
 a {text-decoration:none; color:#000;}
 body {min-width:760px;}
-.mobile{display: none;}
-.pc{display: block;}
+
 
 /* 헤더 */
 html, body {
   margin:0 auto;
-  overflow-x:hidden; overflow-y:auto;
-  width:100%
+  width:calc(100vw -17px);
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 header{
   background:#272422;
@@ -21,6 +23,8 @@ header{
 .gnb {
   display:flex; 
   overflow:hidden;
+  width:100%;
+  max-width:1200px;
   height: inherit;
   margin:0 auto;
   justify-content: center;
@@ -490,7 +494,7 @@ input:checked + label > div > .circle2 {
   font-size:27px;
   font-weight:bolder;
 }
-.main5 h2.main5_content {
+.main5 .main5_content h2 {
   margin-top:5px;
   font-size:17px;
   font-weight:500;
@@ -515,37 +519,54 @@ footer {
   color:#8c8c8c;
 }
 .footer {
-  display:flex;
+  display: flex;
   overflow:hidden;
-  width:100%;
-  height:inherit;
+  height:106px;
   max-width: 1920px;
   margin:0 auto;
+  padding:55px 0px;
   justify-content: center;
   align-items: center;
 }
+
+.footer_logo {
+  width:13.65%;
+  min-width:140px;
+  height:106px;
+  text-align: center;
+}
 .footer_logo > img {
-  height:100px;
-}
-.footer_center{
-  margin-left:calc(5% - 30px);
-  margin-right:calc(16% - 140px);
-  line-height: 180%;
-  font-size:15px;
-  
-}
-.footer_center strong{
-  font-size:16px;
-  font-weight: bolder;
+  width:140px;
+  height:105px;
 }
 
-.footer_right > .phone_number {
+.footer_address strong{
+  font-size:16px;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+.footer_address{
+  width: calc(450px + 21%);
+  height:106px;
+  line-height:180%;
+  padding-top:10px;
+}
+.address br {
+  display: none;
+}
+.footer_top {
+  width:calc(180px + 5%);
+  padding-top:19px;
+  order:2;
+}
+
+.footer_number > .phone_number {
   font-size:25px;
   font-weight: 900;
   line-height: 200%;
 }
 
-.footer_right > .opening_hours {
+.footer_number > .opening_hours {
   font-size:16px;
   font-weight: 500;
   line-height: 150%;
@@ -554,11 +575,6 @@ footer {
 .footer_ico {
   display: none;
 }
-
-.footer_mobile {
-  display: none;
-}
-
 /* TOP BUTTON */
 button {
   background-color:transparent;

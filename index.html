@@ -13,8 +13,8 @@
     <!-- start:헤더 -->
     <header>
       <div class="gnb">
-        <div>
-          <img src="assets/images/img_gnblogo.png" class="gnb_logo" alt="">
+        <div class="logo_box">
+          <img src="assets/images/img_gnblogo.png" class="gnb_logo" alt="네비게이션 로고">
         </div>
         <div class="gnb_menu">
           <nav class="gnb_menu_nav">
@@ -69,11 +69,11 @@
           </nav>
         </div>
         <div class="gnb_logo_link">
-          <img src="assets/images/ico_facebook.png" class="gnb_facebook" alt="">
-          <img src="assets/images/ico_insta.png" class="gnb_insta">
+          <img src="assets/images/ico_facebook.png" class="gnb_facebook" alt="페이스북 로고">
+          <img src="assets/images/ico_insta.png" class="gnb_insta" alt="인스타 로고">
         </div>
         <div class="mobile_menu">
-          <img src="assets/images/img_mobilemenu.png" class="mm" alt="">
+          <img src="assets/images/img_mobilemenu.png" class="mm" alt="모바일 메뉴 버튼">
         </div>
       </div>
     </header>
@@ -82,7 +82,7 @@
   <main>
   <!-- (수정)08/04 버튼마다 배경 바뀌게 수정-->
   <!-- start:이벤트 광고 -->
-  <section class="main1">
+  <div class="main1">
     <div class="empty"></div>
     <input type="radio" name="event_button" id="event1" value="first_event" checked>
     <label for="event1" class="event_button">
@@ -103,7 +103,7 @@
       </div>
     </label>  
     <div class="main1_bg"></div>
-  </section>
+  </div>
   <!-- end:이벤트 광고 -->
 
   <!-- start:공지사항, 검색-->
@@ -196,7 +196,7 @@
         </div>
         <section class="main3_menu">
           <div>
-            <img src="assets/images/img_menu_1.png" class="menu_img" alt="">
+            <img src="assets/images/img_menu_1.png" class="menu_img" alt="더블 초코 라떼">
             <h2 class="menu_title">
               더블 초코 라떼
             </h2>
@@ -205,7 +205,7 @@
             </h2>
           </div>
           <div>
-            <img src="assets/images/img_menu_2.png" class="menu_img" alt="">
+            <img src="assets/images/img_menu_2.png" class="menu_img" alt="바닐라 라떼">
             <h2 class="menu_title">
               바닐라 라떼
             </h2>
@@ -214,7 +214,7 @@
             </h2>
           </div>
           <div>
-            <img src="assets/images/img_menu_3.png" class="menu_img"  alt="">
+            <img src="assets/images/img_menu_3.png" class="menu_img"  alt="치킨 포테이토 세트">
             <h2 class="menu_title">
               치킨 포테이토 세트
             </h2>
@@ -223,7 +223,7 @@
             </h2>
           </div>
           <div>
-            <img src="assets/images/img_menu_4.png" class="menu_img" alt="">
+            <img src="assets/images/img_menu_4.png" class="menu_img" alt="허니버터갈릭 감자튀김">
             <h2 class="menu_title">
               허니버터갈릭 감자튀김
             </h2>
@@ -238,7 +238,7 @@
 
   <!-- (수정)08/05 버튼마다 내용과 배경 바뀌게 수정-->
   <!-- start:지원 게임 -->
-  <section class="main4">
+  <div class="main4">
     <div class="main4_button_box">
       <!-- 지원 게임 버튼-->
       <input type="radio" name="game_button" id="game1" value="first_game" checked>
@@ -292,7 +292,7 @@
       </div>
       </div>
     </div>
-  </section>
+  </div>
   <!-- end:지원 게임 -->
 
   <!-- start:매장 찾기 -->
@@ -316,41 +316,56 @@
   </section>
   </main>
 
-  <!-- start:푸터 -->
+  <!-- start: 푸터 -->
   <footer>
     <section class="footer">
 
       <div class="footer_logo">
-        <img src="assets/images/img_footerlogo.png" alt="">
+        <img src="assets/images/img_footerlogo.png" alt="푸터 로고">
       </div>
 
-      <div class="footer_center">
-        <p><strong>주소</strong> : 경기도 안양시 동안구 동편로 13번길 65, 넥스트아이빌딩 302호<br>
-        <strong>사업자번호</strong> : 224-86-00895 · <strong>대표자</strong> : 김동혁 · e-mail : info@redbutton.co.kr<br>
-        COPYRIGHT ⓒ Redbutton co.,Ltd. All rights reserved.</p>
-      </div>
-
-      <div class="footer_right">
-        <h2 class="phone_number">
-          <i>1644-0641</i>
-        </h2>
-        <h2 class="opening_hours">
-          오전 9시~12시 / 오후 1시~6시
-        </h2>
-        <h2 class="opening_hours">
-          (주말, 공휴일 휴무)
-        </h2>
+      <div class="footer_top">
+        <div class="footer_number">
+          <h2 class="phone_number">
+            <i>1644-0641</i>
+          </h2>
+          <h2 class="opening_hours">
+            오전 9시~12시 / 오후 1시~6시
+          </h2>
+          <h2 class="opening_hours">
+            (주말, 공휴일 휴무)
+          </h2>
+        </div>
+    
         <div class="footer_ico">
-          <img src="assets/images/ico_facebook.png" class="facebooklogo" alt="">
-          <img src="assets/images/ico_insta.png" class="instalogo" alt="">
+          <img src="assets/images/ico_facebook.png" class="facebooklogo" alt="페이스북 로고">
+          <img src="assets/images/ico_insta.png" class="instalogo" alt="인스타 로고">
         </div>
       </div>
+      
+      
+      <div class="footer_address">
+        <div>
+          <p class="address">
+            <strong>주소</strong> : 경기도 안양시 동안구 동편로 13번길 65,<br> 넥스트아이빌딩 302호
+          </p>
+          <p class="address">
+            <strong>사업자번호</strong> : 224-86-00895 · <strong>대표자</strong> : 김동혁 
+            <span>·</span>
+            <br> e-mail : info@redbutton.co.kr
+          </p>
+        </div>
+        <p class="copyright">
+          COPYRIGHT ⓒ Redbutton co.,Ltd. All rights reserved.
+        </p>
+      </div>
+
     </section>
   </footer>
-  
-  <!-- end:푸터 -->
+  <!-- end: 푸터 -->
+
   <!-- end : 수정 : 20220808 tag class 교체  -->
 
-  <button type="button" onclick="location.href='#'" class="top_button"><img src="assets/images/ico_topbutton.png" alt=""></button>
+  <button type="button" onclick="location.href='#'" class="top_button"><img src="assets/images/ico_topbutton.png" alt="탑 버튼"></button>
   </body>
 </html>
