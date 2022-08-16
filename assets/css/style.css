@@ -23,7 +23,6 @@ header{
 .gnb {
   display:flex; 
   overflow:hidden;
-  width:100%;
   max-width:1200px;
   height: inherit;
   margin:0 auto;
@@ -38,10 +37,14 @@ header{
 .gnb > div > img.gnb_logo {
   width:90px;
   height:90px;
+  margin-left:3px;
 }
-
 .gnb_menu {
-  width:83%;
+  float:right;
+  position:relative;
+}
+.gnb_menu_nav {
+  width:100%;
 }
 .gnb_menu_nav > ul {
   white-space: nowrap;
@@ -62,10 +65,27 @@ header{
   position:relative;
 }
 
+.gnb_menu {
+  display: flex;
+  margin:0 auto;
+  
+}
+.gnb_logo_link {
+  display: table-cell;
+  margin-top:70px;
+  vertical-align: middle;
+  width:8%;
+  order:2;
+}
+.gnb_menu_nav {
+  order:1;
+}
+
 .gnb_logo_link > .gnb_facebook,
 .gnb_logo_link > .gnb_insta {
-  width:30px;
-  height:30px;
+  width:32px;
+  height:32px;
+  margin-left:3px;
 }
 /* hover */
 nav li ul {
@@ -106,6 +126,11 @@ ul:hover +.LNB{
   display:block;
   position:absolute;
   z-index:1;
+}
+
+/* 모바일 GNB 가리기 */
+.mobile_arrow {
+  display: none;
 }
 
 /* (수정)08/04 버튼마다 배경 바뀌게 수정 */
@@ -280,13 +305,11 @@ h2.main2_search_title {
 }
 
 .main3_box {
-  width:100%;
   max-width:1194px;
   margin:0 auto;
 }
 
 .main3_title {
-  width:100%;
   height: 72px;
   font-size:54px;
   font-weight: 900;
@@ -369,12 +392,11 @@ h2.main2_search_title {
 
 #game1:checked ~ .main4_bg_1 {
   position: relative;
-  width:100%;
   height:540px;
   max-width:1050px;
   color:#fff;
   display: block;
-  height:540px;
+
   background:url(../images/bg_incan_1.jpg);
   background-position: center;
   background-size: 1050px;
@@ -388,7 +410,6 @@ h2.main2_search_title {
 
 #game2:checked ~ .main4_bg_2 {
   position: relative;
-  width:100%;
   height:540px;
   max-width:1050px;
   color:#fff;
@@ -540,12 +561,12 @@ footer {
   height:105px;
 }
 
-.footer_address strong{
+.footer_info strong{
   font-size:16px;
   font-weight: bolder;
   white-space: nowrap;
 }
-.footer_address{
+.footer_info{
   width: calc(450px + 21%);
   height:106px;
   line-height:180%;
@@ -554,7 +575,7 @@ footer {
 .address br {
   display: none;
 }
-.footer_top {
+.footer_contents {
   width:calc(180px + 5%);
   padding-top:19px;
   order:2;
