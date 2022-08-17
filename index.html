@@ -4,8 +4,8 @@
     <title>보드게임카페 레드버튼</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
-    <link rel="stylesheet" type="text/css" media="(max-width:767px)" href="assets/css/style2.css"  >
+    <link rel="stylesheet" type="text/css" media="(min-width:768px)" href="assets/css/style.css" >
+    <link rel="stylesheet" type="text/css" media="(max-width:767px)" href="assets/css/style2.css">
   </head>
   <body>
     <!-- 수정: 20220811 미디어 쿼리 수정-->
@@ -17,7 +17,8 @@
           <img src="assets/images/img_gnblogo.png" class="gnb_logo" alt="네비게이션 로고">
         </div>
 
-
+        <input type="checkbox" name="mobile_nav" id="mobile_nav" value="mobile_nav">
+        <label for="mobile_nav" class="mobile_nav_button"></label>
 
         <div class="gnb_menu">
 
@@ -26,68 +27,67 @@
             <img src="assets/images/ico_insta.png" class="gnb_insta" alt="인스타 로고">
           </div>
 
-          <div class="mobile_menu">
-            <input type="checkbox" name="mobile_nav" id="mobile_nav" value="mobile_nav">
-            <label for="mobile_nav" class="mobile_nav_button"></label>
-          </div>
-
           <nav class="gnb_menu_nav">
+
+            <input type="checkbox" name="brand" id="brand" value="brand">
+            <input type="checkbox" name="boardgame" id="boardgame" value="boardgame">
+            <input type="checkbox" name="menu" id="menu" value="menu">
+            <input type="checkbox" name="store" id="store" value="store">
+            <input type="checkbox" name="contact" id="contact" value="contact">
+            <input type="checkbox" name="franchise" id="franchise" value="franchise">
+
             <ul>
-              <li>
-                <a href="#BRAND">
-                  BRAND
-                </a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+              <li class="brand">
+                <label for="brand" class="brand">
+                  <a href="#BRAND">BRAND</a>
+                  <span class="mobile_arrow">
+                  </span>
+                </label>
                 <ul>
-                  <li>
-                    <a href="#">
-                      레드버튼 소개
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      채용안내
-                    </a>
-                  </li>
+                  <li><a href="#">레드버튼 소개</a></li>
+                  <li><a href="#">채용안내</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#BOARDGAME">BOARDGAME</a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+
+              <li class="boardgame">
+                <label for="boardgame" class="boardgame">
+                  <a href="#BOARDGAME">BOARDGAME</a>
+                
+                  <span class="mobile_arrow"></span>
+                </label>
                 <ul>
                   <li><a href="#">보드게임카페 전용앱</a></li>
                   <li><a href="#">보드게임 찾기</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#MENU">MENU</a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+              
+              <li class="menu">
+                <label for="menu" class="menu">
+                  <a href="#MENU">MENU</a>
+                  <span class="mobile_arrow"></span>
+                </label>
                 <ul>
                   <li><a href="#음료">음료</a></li>
                   <li><a href="#스낵/푸드">스낵/푸드</a></li>
                   <li><a href="#세트메뉴">세트메뉴</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#STORE">STORE</a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+              
+              <li class="store">
+                <label for="store" class="store">
+                  <a href="#STORE">STORE</a>
+                  <span class="mobile_arrow"></span>
+                </label>
                 <ul>
                   <li><a href="#매장찾기">매장찾기</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#CONTACT">CONTACT</a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+
+              <li class="contact">
+                <label for="contact" class="contact">
+                  <a href="#CONTACT">CONTACT</a>
+                  <span class="mobile_arrow"></span>
+                </label>
                 <ul>
                   <li><a href="#공지사항">공지사항</a></li>
                   <li><a href="#제휴/제안">제휴/제안</a></li>
@@ -95,17 +95,21 @@
                   <li><a href="#고객의견">고객의견</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#FRANCHISE">FRANCHISE</a>
-                <span>
-                  <label for="brand" class="mobile_arrow"></label>
-                </span>
+              
+              <li class="franchise">
+                <label for="franchise" class="franchise">
+                  <a href="#FRANCHISE">FRANCHISE</a>
+                  <span class="mobile_arrow"></span>
+                </label>
                 <ul>
                   <li><a href="#브랜드_경쟁력">브랜드 경쟁력</a></li>
                   <li><a href="#가맹개설_안내">가맹개설 안내</a></li>
+                  <li class="mobile"><a href="#고객의견">위탁운영시스템</a></li>
                   <li><a href="#투자/가맹상담">투자/가맹상담</a></li>
                 </ul>
               </li>
+              
+              
             </ul>
             <div class="LNB"></div> <!--숨겨진 창-->
           </nav>
@@ -121,25 +125,35 @@
   <!-- start:이벤트 광고 -->
   <div class="main1">
     <div class="empty"></div>
+
     <input type="radio" name="event_button" id="event1" value="first_event" checked>
-    <label for="event1" class="event_button">
-      <div class="wrapper">
-        <div class="circle"></div>
-      </div>
-      </label>
     <input type="radio" name="event_button" id="event2" value="second_event">
-    <label for="event2" class="event_button">
-      <div class="wrapper">
-        <div class="circle"></div>
-      </div>
-    </label>
     <input type="radio" name="event_button" id="event3" value="third_event">
-    <label label for="event3" class="event_button">
-      <div class="wrapper">
-        <div class="circle"></div>
-      </div>
-    </label>  
-    <div class="main1_bg"></div>
+    
+    <ul class="main1_img_slide">
+      <li class="main1_event_1"></li>
+      <li class="main1_event_2"></li>
+      <li class="main1_event_3"></li>
+    </ul>
+
+    <div class="bullets">
+      <label for="event1" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
+      <label for="event2" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
+      <label label for="event3" class="event_button">
+        <div class="wrapper">
+          <div class="circle"></div>
+        </div>
+      </label>
+    </div>
+
   </div>
   <!-- end:이벤트 광고 -->
 
@@ -276,60 +290,70 @@
   <!-- (수정)08/05 버튼마다 내용과 배경 바뀌게 수정-->
   <!-- start:지원 게임 -->
   <div class="main4">
+
+    <input type="radio" name="game_button" id="game1" value="first_game" checked>
+    <input type="radio" name="game_button" id="game2" value="second_game">
+
     <div class="main4_button_box">
       <!-- 지원 게임 버튼-->
-      <input type="radio" name="game_button" id="game1" value="first_game" checked>
-      <label for="game1" class="game_button">
-        <div class="wrapper2">
-          <div class="circle2"></div>
-        </div>
-      </label>
-      <input type="radio" name="game_button" id="game2" value="second_game">
-      <label for="game2" class="game_button">
-        <div class="wrapper2">
-          <div class="circle2"></div>
-        </div>
-      </label> 
-
-      <div class="main4_bg_1">
-        <div class="main4_contents_1">
-          <div class="main4_title">새 영상설명 지원 게임</div>
-          <br />
-          <span class="game_title">INGCAN GOLD</span>
-          <p class="game_subtitle">잉카의 황금</p>
-          <table>
-            <tr>
-              <td>난이도 Normal</td>
-              <td>추천인원 3~8인</td>
-              <td>게임시간 25분</td>
-            </tr>
-          </table>
-          <div class="game_content">
-            <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면<br >만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+      <ul class="main4_slide">
+        <li>
+          <div class="main4_bg_1">
+            <div class="main4_contents_1">
+              <div class="main4_title">새 영상설명 지원 게임</div>
+              <br />
+              <span class="game_title">INGCAN GOLD</span>
+              <p class="game_subtitle">잉카의 황금</p>
+              <table>
+                <tr>
+                  <td>난이도 Normal</td>
+                  <td>추천인원 3~8인</td>
+                  <td>게임시간 25분</td>
+                </tr>
+              </table>
+              <div class="game_content">
+                <p>대박을 노리다가 쪽박을 찰 수도! 어느정도 황금이면<br >만족하겠니? 재밌는 심리전의 세계를 만끽하세요.</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </li>
+        <li>
+          <div class="main4_bg_2">
+            <div class="main4_contents_2">
+              <div class="main4_title">새 영상설명 지원 게임</div>
+            <br />
+            <span class="game_title">POWER GRID</span>
+            <p class="game_subtitle">파워 그리드</p>
+            <table>
+              <tr>
+                <td>난이도 Extreme</td>
+                <td>추천인원 4~6인</td>
+                <td>게임시간 120분</td>
+              </tr>
+            </table>
+            <div class="game_content">
+              <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.<br >전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="bullets">
+        <label for="game1" class="game_button">
+          <div class="wrapper2">
+            <div class="circle2"></div>
+          </div>
+        </label>
+        <label for="game2" class="game_button">
+          <div class="wrapper2">
+            <div class="circle2"></div>
+          </div>
+        </label> 
       </div>
 
-      <div class="main4_bg_2">
-        <div class="main4_contents_2">
-          <div class="main4_title">새 영상설명 지원 게임</div>
-        <br />
-        <span class="game_title">POWER GRID</span>
-        <p class="game_subtitle">파워 그리드</p>
-        <table>
-          <tr>
-            <td>난이도 Extreme</td>
-            <td>추천인원 4~6인</td>
-            <td>게임시간 120분</td>
-          </tr>
-        </table>
-        <div class="game_content">
-          <p>놀라운 테마성과 섬세한 현실반영이 돋보이는 명작게임.<br >전략게임을 좋아한다면 레드버튼에서 파워그리드를.</p>
-        </div>
-      </div>
-      </div>
     </div>
   </div>
+
   <!-- end:지원 게임 -->
 
   <!-- start:매장 찾기 -->
