@@ -17,6 +17,7 @@ body {min-width:760px;}
 
 
 /* 헤더 */
+html {scroll-behavior: smooth;}
 html, body {
   margin:0 auto;
   width:calc(100vw -17px);
@@ -29,51 +30,56 @@ header{
   background:#272422;
   width: 100%;
   height: 140px;
-  
 }
 
 .gnb {
-  display:flex;
+  display: flex;
   width:100%;
+  height:90px;
   max-width:1200px;
   margin:0 auto;
-  justify-content: center;
-  align-content: center;
+  padding: 25px 0px;
 }
 
-.logo_box{
-  margin: auto;
-}
 div.logo_box .gnb_logo {
   width:90px;
   height:90px;
 }
 
 .gnb_menu {
-  width:calc(100% - 90px);
-  height:140px;
+  width:100%;
   display: flex;
-  margin:0 auto;
-  justify-content: center;
   align-items: center;
 }
 
-.gnb_menu_nav ul > li {
-  display : inline-block;
-  padding : 0 calc(6% - 30px);
-  margin : 40px 0;
-}
-
 .gnb_menu_nav {
-  width:90%;
+  width:100%;
+  max-width:1200px;
+  padding:0px 60px;
+  height:90px;
   order:1;
 }
 
 .gnb_menu_nav ul{
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   width:100%;
   display: flex;
+}
+
+.gnb_menu_nav ul.top > li {
+  display : inline-block;
+  margin-top:35px;
+  text-align: center;
+  z-index: 2;
+}
+
+.gnb_menu_nav ul > li label a{
+  height:27px;
+  margin:0 auto;
+  font-size:20px;
+  padding:0 calc(6% - 25px);
+  color:#edecea;
+
 }
 
 .gnb_logo_link {
@@ -86,27 +92,38 @@ div.logo_box .gnb_logo {
 .gnb_logo_link img {
   width:32px;
   height:32px;
-  margin-left:3px;
+  margin-left:8px;
 }
 /* hover */
 nav.gnb_menu_nav li ul {
-  display:none;
-  position:absolute;
-  top:178px;
-  left:100px;
-  width:100%;
-  height:150px;
+  z-index:-1;
+  display: block;
   text-align: left;
   font-size:15px;
   font-weight:500px;
-  line-height:230%;
-  margin:40px;
+  white-space: wrap;
+  margin: 90px 0px 0px 0px;
 }
 
-nav.gnb_menu_nav li a{
-  display:block;
-  color:#edecea;
-  font-size:20px;
+nav.gnb_menu_nav li ul li{
+  display: block;
+  position:relative;
+}
+
+nav.gnb_menu_nav li ul li a{
+  opacity: 0;
+  display: block;
+  width:100%;
+  height:27px;
+  padding:6px 0px;
+  color:#b2b2b2;
+  font-size:16px;
+  text-align: left;
+  
+}
+
+nav.gnb_menu_nav li ul li.mobile {
+  display: none;
 }
 
 .LNB {
@@ -120,8 +137,8 @@ nav.gnb_menu_nav li a{
   z-index: -1;
 }
 
-.gnb_menu:hover > .gnb_menu_nav li ul{
-  display:block;
+.gnb_menu:hover > .gnb_menu_nav li ul li a{
+  opacity: 1;
   z-index:2;
 }
 
@@ -223,45 +240,12 @@ input#event3:checked ~ div.bullets label:nth-child(3) > div > .circle {
 /* input에 체크되면 슬라이드 효과 */
 .main1 input#event1:checked ~ .main1_img_slide > li {
   transform:translateX(0%);
-  animation:slide01 15s infinite;
 }
 .main1 input#event2:checked ~ .main1_img_slide > li {
   transform:translateX(-100%);
-  animation:slide02 15s infinite;
 }
 .main1 input#event3:checked ~ .main1_img_slide > li {
   transform:translateX(-200%);
-  animation:slide03 15s infinite;
-}
-
-@keyframes slide01 {
-  0% {left:0%}
-  33% {left:0%}
-  34% {left:-100%}
-  66% {left:-100%}
-  67% {left:-200%}
-  99% {left:-200%}
-  100% {left:0%}
-}
-
-@keyframes slide02 {
-  0% {left:0%}
-  33% {left:0%}
-  34% {left:-100%}
-  66% {left:-100%}
-  67% {left:100%}
-  99% {left:100%}
-  100% {left:0%}
-}
-
-@keyframes slide03 {
-  0% {left:0%}
-  33% {left:0%}
-  34% {left:200%}
-  66% {left:200%}
-  67% {left:100%}
-  99% {left:100%}
-  100% {left:0%}
 }
 
 /* 공지사항 검색 */
@@ -414,73 +398,62 @@ h2.main2_search_title {
 
 /* (수정)08/05 버튼마다 내용과 배경 바뀌게 수정 */
 /* 지원 게임 */
-.main4_slide table {
+.main4_contents_1 table,
+.main4_contents_2 table{
   border:1px solid white;
   border-collapse: collapse;
   width: 450px;
 }
-.main4_slide tr, 
-.main4_slide td {
+.main4_contents_1 tr, 
+.main4_contents_2 td {
   border:1px solid white;
   padding:5px;
 }
 
-.main4_mobile {
-  display: none;
-}
 .main4 {
-  display:flex;
-  justify-content: center;
   width:100%;
+  display:block;
+  position:relative;
   max-width:1920px;
   height:540px;
   background-color: #2e2d35;
 }
 
 .main4_button_box {
-  display:relative;
+  position:relative;
+  overflow:hidden;
   width:100%;
   max-width:1050px;
   height:540px;
+  margin:0 auto;
 }
 
 .main4_bg_1 {
-  position: relative;
   max-width:1050px;
   height:525px;
-  color:#fff;
   display: block;
   background:url(../images/bg_incan_1.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: 1050px;
   background-repeat: no-repeat;
-}
-
-.main4_bg_1 > .main4_contents_1{
-  display: block;
-  top:60px;
 }
 
 .main4_bg_2 {
-  position: relative;
   max-width:1050px;
   height:525px;
-  color:#fff;
   display: block;
   background:url(../images/bg_powergrid_2.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: 1050px;
   background-repeat: no-repeat;
-}
-
-.main4_bg_2 > .main4_contents_2{
-  display: block;
-  top:60px;
 }
 
 .main4_contents_1, 
 .main4_contents_2{
-  position: relative;
+  position: absolute;
+  color:#fff;
+  top:60px;
+  left:-1050px;
 }
 .main4_contents_1 > .main4_title,
 .main4_contents_2 > .main4_title {
@@ -511,7 +484,6 @@ h2.main2_search_title {
 }
 .main4_contents_1 > div.game_content,
 .main4_contents_2 > div.game_content {
-  position: initial;
   margin-top:16px;
   line-height:180%;
   color:#a9a9b9;
@@ -536,6 +508,17 @@ h2.main2_search_title {
 }
 .main4 input#game2:checked ~ .main4_button_box .main4_slide > li {
   transform:translateX(-100%);
+}
+
+.main4 input#game1:checked ~ .main4_button_box .main4_contents_1 {
+  display: block;
+  transform:translateX(235%);
+  transition:all .5s 0.5s;
+}
+.main4 input#game2:checked ~ .main4_button_box .main4_contents_2 {
+  display: block;
+  transform:translateX(235%);
+  transition:all .5s 0.5s;
 }
 
 /* 지원 게임 버튼*/
@@ -574,9 +557,6 @@ input#game2:checked ~ .main4_button_box div.bullets label:nth-child(2) > div > .
   height: 16px;
   margin: 0px 3px;
 }
-
-/* main4 슬라이드 애니메이션 */
-
 
 /* 매장 찾기  */
 .main5 {
@@ -619,6 +599,8 @@ input#game2:checked ~ .main4_button_box div.bullets label:nth-child(2) > div > .
 
 /* 푸터 */
 footer {
+  display:block;
+  bottom:0px;
   width:100%;
   height:215px;
   background-color:#272422;
